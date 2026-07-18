@@ -1,0 +1,1671 @@
+{
+  "18775cba-a6e3-43d5-878d-a13760d342f7": {
+    "interviewer_name": "Vivek Goyal",
+    "interviewer_email": "vigoyal5@in.ibm.com",
+    "candidate_name": "Ravi Kumar",
+    "candidate_email": "ravi.kumar@ibm.com",
+    "difficulty": "easy",
+    "question_count": 5,
+    "questions": [
+      {
+        "question": "In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?",
+        "options": [
+          "driver.selectFrame(int index)",
+          "driver.frame(int index)",
+          "driver.switchTo().frame(int index)",
+          "driver.changeFrame(int index)"
+        ],
+        "answer_index": 2,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Understanding frame handling is essential for automating web applications with iframes, a common requirement in test automation.",
+        "discussion_points": "Frame switching methods, handling nested frames, switching back to default content, frame identification strategies",
+        "follow_up": "How would you handle a scenario where a frame takes time to load before switching to it?",
+        "explanation": "switchTo().frame(int index) is the correct Selenium WebDriver method for switching to frames by index.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to create a Page Object Model (POM) class for a login page. Which annotation should you use with PageFactory to initialize web elements in Selenium?",
+        "options": [
+          "@FindBy",
+          "@WebElement",
+          "@FindElement",
+          "@Locator"
+        ],
+        "answer_index": 0,
+        "skill": "Automation Framework Development (POM/Page Factory)",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Page Factory is a core component of POM framework development, which is explicitly required in the JD for creating maintainable automation frameworks.",
+        "discussion_points": "PageFactory.initElements(), @FindBy annotation attributes, lazy initialization, difference between FindElement and FindBy",
+        "follow_up": "What is the advantage of using PageFactory over traditional element initialization in POM?",
+        "explanation": "@FindBy is the correct annotation used with PageFactory to locate and initialize web elements in POM.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Which TestNG annotation is used to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeMethod",
+          "@BeforeTest",
+          "@BeforeClass",
+          "@BeforeSuite"
+        ],
+        "answer_index": 0,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "TestNG is a required skill in the JD, and understanding its annotations is fundamental for structuring automated test execution.",
+        "discussion_points": "TestNG annotation hierarchy, execution order, @BeforeMethod vs @BeforeClass, test configuration methods",
+        "follow_up": "What is the difference between @BeforeTest and @BeforeClass annotations in TestNG?",
+        "explanation": "@BeforeMethod executes before each test method, making it ideal for test-level setup operations.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You are automating API tests using Rest Assured in Java. Which method chain correctly sends a GET request and validates the status code is 200?\n\n```java\nRestAssured.baseURI = \"https://api.example.com\";\n// Complete the code\n```",
+        "options": [
+          "when().get(\"/users\").statusCode(200);",
+          "get(\"/users\").then().assertThat().statusCode(200);",
+          "given().when().get(\"/users\").then().statusCode(200);",
+          "given().get(\"/users\").validate().statusCode(200);"
+        ],
+        "answer_index": 2,
+        "skill": "API Testing (Rest Assured)",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "API automation using Rest Assured is explicitly required in the JD, and this tests practical implementation knowledge of the BDD-style syntax.",
+        "discussion_points": "Rest Assured BDD syntax, given-when-then structure, request specifications, response validation, status code assertions",
+        "follow_up": "How would you extract and validate a specific JSON field from the response body in Rest Assured?",
+        "explanation": "given().when().get().then().statusCode() follows Rest Assured's BDD-style syntax for API testing and validation.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your automation suite is integrated with Jenkins CI/CD pipeline. After a test execution, 5 out of 50 tests failed. The Product Owner asks you to prioritize which failures to investigate first. What should be your approach?",
+        "options": [
+          "Investigate all failures equally as they all indicate potential defects",
+          "Focus only on the tests that failed in the previous build",
+          "Rerun the failed tests immediately and report only if they fail again",
+          "Check if failures are in critical user journeys, verify if they are consistent across runs, and review recent code changes"
+        ],
+        "answer_index": 3,
+        "skill": "Agile Testing & Collaboration",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "The JD requires collaboration with Product Owners and participation in Agile ceremonies, making prioritization and communication skills essential.",
+        "discussion_points": "Test failure analysis, flaky tests, prioritization criteria, stakeholder communication, defect triage, CI/CD best practices",
+        "follow_up": "How would you communicate these test results to the development team during a daily stand-up?",
+        "explanation": "Prioritizing by business impact, consistency, and recent changes ensures efficient defect investigation and stakeholder value.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your resume mentions you developed a Selenium automation framework using TestNG and Maven. In TestNG, which annotation would you use to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeSuite",
+          "@BeforeTest",
+          "@BeforeMethod"
+        ],
+        "answer_index": 3,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Tests understanding of TestNG lifecycle annotations critical for framework design",
+        "discussion_points": "TestNG annotations hierarchy, test execution flow, setup and teardown methods",
+        "follow_up": "How would you handle test data setup that needs to run only once for all tests in a class?",
+        "explanation": "@BeforeMethod runs before each test method, ensuring fresh setup per test execution",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you implemented Page Object Model (POM) framework. Given this code snippet:\n```java\npublic class LoginPage {\n    WebDriver driver;\n    @FindBy(id=\"username\")\n    WebElement usernameField;\n    \n    public LoginPage(WebDriver driver) {\n        this.driver = driver;\n        // What is missing here?\n    }\n}\n```\nWhat is the missing critical step to make @FindBy annotations work?",
+        "options": [
+          "driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);",
+          "new WebDriverWait(driver, 10);",
+          "PageFactory.initElements(driver, this);",
+          "driver.findElement(By.id(\"username\"));"
+        ],
+        "answer_index": 2,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Validates hands-on POM implementation knowledge and PageFactory usage",
+        "discussion_points": "PageFactory initialization, lazy initialization, @FindBy vs @FindBys, element locator strategies",
+        "follow_up": "What are the advantages and disadvantages of using PageFactory compared to traditional findElement approach?",
+        "explanation": "PageFactory.initElements initializes web elements annotated with @FindBy in POM classes",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured method chain correctly validates that a GET request to '/users/123' returns status code 200 and contains a field 'name' with value 'John'?",
+        "options": [
+          "RestAssured.get(\"/users/123\").then().assertThat().statusCode(200).and().body(\"name\").equals(\"John\");",
+          "given().when().get(\"/users/123\").then().statusCode(200).body(\"name\", equalTo(\"John\"));",
+          "when().get(\"/users/123\").expect().statusCode(200).body(\"name\", is(\"John\"));",
+          "given().get(\"/users/123\").then().status(200).body(\"name\").contains(\"John\");"
+        ],
+        "answer_index": 1,
+        "skill": "Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Tests practical API testing implementation skills with Rest Assured syntax",
+        "discussion_points": "Rest Assured BDD syntax, Hamcrest matchers, response validation, request specifications",
+        "follow_up": "How would you extract and reuse the authentication token from a login API response in subsequent requests?",
+        "explanation": "Correct Rest Assured BDD syntax: given-when-then with statusCode and Hamcrest matcher equalTo",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, and each test takes 10 minutes sequentially, what is the minimum total execution time if parallel execution is optimally configured?",
+        "options": [
+          "10 minutes",
+          "50 minutes",
+          "30 minutes",
+          "20 minutes"
+        ],
+        "answer_index": 3,
+        "skill": "Jenkins",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Assesses understanding of parallel execution optimization and CI/CD pipeline efficiency",
+        "discussion_points": "TestNG parallel execution modes, Jenkins distributed builds, thread-count configuration, resource optimization",
+        "follow_up": "What TestNG XML configuration would you use to achieve this parallel execution across multiple classes?",
+        "explanation": "3 nodes run 3 tests in 10 min, then 2 remaining tests in next 10 min = 20 minutes total",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment and reduced regression testing effort from 5 days to 1 day. What was likely the MOST critical factor in achieving this 80% reduction?",
+        "options": [
+          "Increasing the number of manual testers on the team",
+          "Conducting regression testing only once per sprint instead of multiple times",
+          "Reducing the scope of regression testing by removing low-priority test cases",
+          "Implementing comprehensive automation coverage with parallel execution and CI/CD integration"
+        ],
+        "answer_index": 3,
+        "skill": "Test Automation Strategy",
+        "domain": "Testing",
+        "question_type": "Leadership / Behavioral",
+        "experience_level": "0-3 Years",
+        "reason": "Evaluates understanding of automation impact, strategic thinking, and team collaboration in Agile context",
+        "discussion_points": "Automation ROI, test coverage strategy, CI/CD benefits, stakeholder communication, Agile testing practices",
+        "follow_up": "How did you prioritize which test cases to automate first to achieve quick wins?",
+        "explanation": "Automation with parallel execution and CI/CD enables rapid, repeatable testing at scale",
+        "source_doc": "Resume",
+        "section": "B"
+      }
+    ],
+    "section_a": [
+      {
+        "question": "In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?",
+        "options": [
+          "driver.selectFrame(int index)",
+          "driver.frame(int index)",
+          "driver.switchTo().frame(int index)",
+          "driver.changeFrame(int index)"
+        ],
+        "answer_index": 2,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Understanding frame handling is essential for automating web applications with iframes, a common requirement in test automation.",
+        "discussion_points": "Frame switching methods, handling nested frames, switching back to default content, frame identification strategies",
+        "follow_up": "How would you handle a scenario where a frame takes time to load before switching to it?",
+        "explanation": "switchTo().frame(int index) is the correct Selenium WebDriver method for switching to frames by index.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to create a Page Object Model (POM) class for a login page. Which annotation should you use with PageFactory to initialize web elements in Selenium?",
+        "options": [
+          "@FindBy",
+          "@WebElement",
+          "@FindElement",
+          "@Locator"
+        ],
+        "answer_index": 0,
+        "skill": "Automation Framework Development (POM/Page Factory)",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Page Factory is a core component of POM framework development, which is explicitly required in the JD for creating maintainable automation frameworks.",
+        "discussion_points": "PageFactory.initElements(), @FindBy annotation attributes, lazy initialization, difference between FindElement and FindBy",
+        "follow_up": "What is the advantage of using PageFactory over traditional element initialization in POM?",
+        "explanation": "@FindBy is the correct annotation used with PageFactory to locate and initialize web elements in POM.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Which TestNG annotation is used to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeMethod",
+          "@BeforeTest",
+          "@BeforeClass",
+          "@BeforeSuite"
+        ],
+        "answer_index": 0,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "TestNG is a required skill in the JD, and understanding its annotations is fundamental for structuring automated test execution.",
+        "discussion_points": "TestNG annotation hierarchy, execution order, @BeforeMethod vs @BeforeClass, test configuration methods",
+        "follow_up": "What is the difference between @BeforeTest and @BeforeClass annotations in TestNG?",
+        "explanation": "@BeforeMethod executes before each test method, making it ideal for test-level setup operations.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You are automating API tests using Rest Assured in Java. Which method chain correctly sends a GET request and validates the status code is 200?\n\n```java\nRestAssured.baseURI = \"https://api.example.com\";\n// Complete the code\n```",
+        "options": [
+          "when().get(\"/users\").statusCode(200);",
+          "get(\"/users\").then().assertThat().statusCode(200);",
+          "given().when().get(\"/users\").then().statusCode(200);",
+          "given().get(\"/users\").validate().statusCode(200);"
+        ],
+        "answer_index": 2,
+        "skill": "API Testing (Rest Assured)",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "API automation using Rest Assured is explicitly required in the JD, and this tests practical implementation knowledge of the BDD-style syntax.",
+        "discussion_points": "Rest Assured BDD syntax, given-when-then structure, request specifications, response validation, status code assertions",
+        "follow_up": "How would you extract and validate a specific JSON field from the response body in Rest Assured?",
+        "explanation": "given().when().get().then().statusCode() follows Rest Assured's BDD-style syntax for API testing and validation.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your automation suite is integrated with Jenkins CI/CD pipeline. After a test execution, 5 out of 50 tests failed. The Product Owner asks you to prioritize which failures to investigate first. What should be your approach?",
+        "options": [
+          "Investigate all failures equally as they all indicate potential defects",
+          "Focus only on the tests that failed in the previous build",
+          "Rerun the failed tests immediately and report only if they fail again",
+          "Check if failures are in critical user journeys, verify if they are consistent across runs, and review recent code changes"
+        ],
+        "answer_index": 3,
+        "skill": "Agile Testing & Collaboration",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "The JD requires collaboration with Product Owners and participation in Agile ceremonies, making prioritization and communication skills essential.",
+        "discussion_points": "Test failure analysis, flaky tests, prioritization criteria, stakeholder communication, defect triage, CI/CD best practices",
+        "follow_up": "How would you communicate these test results to the development team during a daily stand-up?",
+        "explanation": "Prioritizing by business impact, consistency, and recent changes ensures efficient defect investigation and stakeholder value.",
+        "source_doc": "Job Description",
+        "section": "A"
+      }
+    ],
+    "section_b": [
+      {
+        "question": "Your resume mentions you developed a Selenium automation framework using TestNG and Maven. In TestNG, which annotation would you use to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeSuite",
+          "@BeforeTest",
+          "@BeforeMethod"
+        ],
+        "answer_index": 3,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Tests understanding of TestNG lifecycle annotations critical for framework design",
+        "discussion_points": "TestNG annotations hierarchy, test execution flow, setup and teardown methods",
+        "follow_up": "How would you handle test data setup that needs to run only once for all tests in a class?",
+        "explanation": "@BeforeMethod runs before each test method, ensuring fresh setup per test execution",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you implemented Page Object Model (POM) framework. Given this code snippet:\n```java\npublic class LoginPage {\n    WebDriver driver;\n    @FindBy(id=\"username\")\n    WebElement usernameField;\n    \n    public LoginPage(WebDriver driver) {\n        this.driver = driver;\n        // What is missing here?\n    }\n}\n```\nWhat is the missing critical step to make @FindBy annotations work?",
+        "options": [
+          "driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);",
+          "new WebDriverWait(driver, 10);",
+          "PageFactory.initElements(driver, this);",
+          "driver.findElement(By.id(\"username\"));"
+        ],
+        "answer_index": 2,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Validates hands-on POM implementation knowledge and PageFactory usage",
+        "discussion_points": "PageFactory initialization, lazy initialization, @FindBy vs @FindBys, element locator strategies",
+        "follow_up": "What are the advantages and disadvantages of using PageFactory compared to traditional findElement approach?",
+        "explanation": "PageFactory.initElements initializes web elements annotated with @FindBy in POM classes",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured method chain correctly validates that a GET request to '/users/123' returns status code 200 and contains a field 'name' with value 'John'?",
+        "options": [
+          "RestAssured.get(\"/users/123\").then().assertThat().statusCode(200).and().body(\"name\").equals(\"John\");",
+          "given().when().get(\"/users/123\").then().statusCode(200).body(\"name\", equalTo(\"John\"));",
+          "when().get(\"/users/123\").expect().statusCode(200).body(\"name\", is(\"John\"));",
+          "given().get(\"/users/123\").then().status(200).body(\"name\").contains(\"John\");"
+        ],
+        "answer_index": 1,
+        "skill": "Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Tests practical API testing implementation skills with Rest Assured syntax",
+        "discussion_points": "Rest Assured BDD syntax, Hamcrest matchers, response validation, request specifications",
+        "follow_up": "How would you extract and reuse the authentication token from a login API response in subsequent requests?",
+        "explanation": "Correct Rest Assured BDD syntax: given-when-then with statusCode and Hamcrest matcher equalTo",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, and each test takes 10 minutes sequentially, what is the minimum total execution time if parallel execution is optimally configured?",
+        "options": [
+          "10 minutes",
+          "50 minutes",
+          "30 minutes",
+          "20 minutes"
+        ],
+        "answer_index": 3,
+        "skill": "Jenkins",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Assesses understanding of parallel execution optimization and CI/CD pipeline efficiency",
+        "discussion_points": "TestNG parallel execution modes, Jenkins distributed builds, thread-count configuration, resource optimization",
+        "follow_up": "What TestNG XML configuration would you use to achieve this parallel execution across multiple classes?",
+        "explanation": "3 nodes run 3 tests in 10 min, then 2 remaining tests in next 10 min = 20 minutes total",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment and reduced regression testing effort from 5 days to 1 day. What was likely the MOST critical factor in achieving this 80% reduction?",
+        "options": [
+          "Increasing the number of manual testers on the team",
+          "Conducting regression testing only once per sprint instead of multiple times",
+          "Reducing the scope of regression testing by removing low-priority test cases",
+          "Implementing comprehensive automation coverage with parallel execution and CI/CD integration"
+        ],
+        "answer_index": 3,
+        "skill": "Test Automation Strategy",
+        "domain": "Testing",
+        "question_type": "Leadership / Behavioral",
+        "experience_level": "0-3 Years",
+        "reason": "Evaluates understanding of automation impact, strategic thinking, and team collaboration in Agile context",
+        "discussion_points": "Automation ROI, test coverage strategy, CI/CD benefits, stakeholder communication, Agile testing practices",
+        "follow_up": "How did you prioritize which test cases to automate first to achieve quick wins?",
+        "explanation": "Automation with parallel execution and CI/CD enables rapid, repeatable testing at scale",
+        "source_doc": "Resume",
+        "section": "B"
+      }
+    ],
+    "count_a": 5,
+    "count_b": 5,
+    "bob_command": "C:\\Users\\VivekGoyal\\AppData\\Roaming\\npm\\bob.cmd --accept-license --hide-intermediary-output -o json --chat-mode ask < [prompt_stdin]",
+    "bob_logs": "[system] Repositories: Programming Knowledge Repository.md, Testing Knowledge Repository.md, Cloud Technologies Knowledge Repository.md, Data Engineering Knowledge Repository.md, AI & Generative AI Knowledge Repository.md, DevOps Knowledge Repository.md, Soft Skills Knowledge Repository.md\n\n=== SECTION A (5 questions — JD-based) ===\n[bob exit code: 0]\n\n[\n  {\n    \"question\": \"In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?\",\n    \"options\": [\n      \"driver.switchTo().frame(int index)\",\n      \"driver.frame(int index)\",\n      \"driver.selectFrame(int index)\",\n      \"driver.changeFrame(int index)\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Understanding frame handling is essential for automating web applications with iframes, a common requirement in test automation.\",\n    \"discussion_points\": \"Frame switching methods, handling nested frames, switching back to default content, frame identification strategies\",\n    \"follow_up\": \"How would you handle a scenario where a frame takes time to load before switching to it?\",\n    \"explanation\": \"switchTo().frame(int index) is the correct Selenium WebDriver method for switching to frames by index.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You need to create a Page Object Model (POM) class for a login page. Which annotation should you use with PageFactory to initialize web elements in Selenium?\",\n    \"options\": [\n      \"@FindElement\",\n      \"@WebElement\",\n      \"@FindBy\",\n      \"@Locator\"\n    ],\n    \"answer_index\": 2,\n    \"skill\": \"Automation Framework Development (POM/Page Factory)\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Page Factory is a core component of POM framework development, which is explicitly required in the JD for creating maintainable automation frameworks.\",\n    \"discussion_points\": \"PageFactory.initElements(), @FindBy annotation attributes, lazy initialization, difference between FindElement and FindBy\",\n    \"follow_up\": \"What is the advantage of using PageFactory over traditional element initialization in POM?\",\n    \"explanation\": \"@FindBy is the correct annotation used with PageFactory to locate and initialize web elements in POM.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Which TestNG annotation is used to execute a method before each test method in a test class?\",\n    \"options\": [\n      \"@BeforeClass\",\n      \"@BeforeTest\",\n      \"@BeforeMethod\",\n      \"@BeforeSuite\"\n    ],\n    \"answer_index\": 2,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"TestNG is a required skill in the JD, and understanding its annotations is fundamental for structuring automated test execution.\",\n    \"discussion_points\": \"TestNG annotation hierarchy, execution order, @BeforeMethod vs @BeforeClass, test configuration methods\",\n    \"follow_up\": \"What is the difference between @BeforeTest and @BeforeClass annotations in TestNG?\",\n    \"explanation\": \"@BeforeMethod executes before each test method, making it ideal for test-level setup operations.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You are automating API tests using Rest Assured in Java. Which method chain correctly sends a GET request and validates the status code is 200?\\n\\n```java\\nRestAssured.baseURI = \\\"https://api.example.com\\\";\\n// Complete the code\\n```\",\n    \"options\": [\n      \"given().when().get(\\\"/users\\\").then().statusCode(200);\",\n      \"get(\\\"/users\\\").then().assertThat().statusCode(200);\",\n      \"when().get(\\\"/users\\\").statusCode(200);\",\n      \"given().get(\\\"/users\\\").validate().statusCode(200);\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"API Testing (Rest Assured)\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"API automation using Rest Assured is explicitly required in the JD, and this tests practical implementation knowledge of the BDD-style syntax.\",\n    \"discussion_points\": \"Rest Assured BDD syntax, given-when-then structure, request specifications, response validation, status code assertions\",\n    \"follow_up\": \"How would you extract and validate a specific JSON field from the response body in Rest Assured?\",\n    \"explanation\": \"given().when().get().then().statusCode() follows Rest Assured's BDD-style syntax for API testing and validation.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Your automation suite is integrated with Jenkins CI/CD pipeline. After a test execution, 5 out of 50 tests failed. The Product Owner asks you to prioritize which failures to investigate first. What should be your approach?\",\n    \"options\": [\n      \"Investigate all failures equally as they all indicate potential defects\",\n      \"Check if failures are in critical user journeys, verify if they are consistent across runs, and review recent code changes\",\n      \"Rerun the failed tests immediately and report only if they fail again\",\n      \"Focus only on the tests that failed in the previous build\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Agile Testing & Collaboration\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"The JD requires collaboration with Product Owners and participation in Agile ceremonies, making prioritization and communication skills essential.\",\n    \"discussion_points\": \"Test failure analysis, flaky tests, prioritization criteria, stakeholder communication, defect triage, CI/CD best practices\",\n    \"follow_up\": \"How would you communicate these test results to the development team during a daily stand-up?\",\n    \"explanation\": \"Prioritizing by business impact, consistency, and recent changes ensures efficient defect investigation and stakeholder value.\",\n    \"source_doc\": \"Job Description\"\n  }\n]\n{\n  \"response\": \"\",\n  \"stats\": {\n    \"models\": {\n      \"premium\": {\n        \"api\": {\n          \"totalRequests\": 2,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 37499\n        },\n        \"tokens\": {\n          \"prompt\": 33293,\n          \"candidates\": 2997,\n          \"total\": 36290,\n          \"cached\": 15861,\n          \"thoughts\": 0,\n          \"tool\": 0\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 1,\n      \"totalSuccess\": 1,\n      \"totalFail\": 0,\n      \"totalDurationMs\": 3,\n      \"totalDecisions\": {\n        \"accept\": 0,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 1\n      },\n      \"byName\": {\n        \"attempt_completion\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 3,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 1\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    },\n    \"budgetSpend\": 54.22,\n    \"maxBudget\": 100,\n    \"sessionCost\": 0.090724\n  }\n}\n\n\n=== SECTION B (5 questions — Resume-based) ===\n[bob exit code: 0]\n\n[\n  {\n    \"question\": \"Your resume mentions you developed a Selenium automation framework using TestNG and Maven. In TestNG, which annotation would you use to execute a method before each test method in a test class?\",\n    \"options\": [\n      \"@BeforeClass\",\n      \"@BeforeMethod\",\n      \"@BeforeTest\",\n      \"@BeforeSuite\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Tests understanding of TestNG lifecycle annotations critical for framework design\",\n    \"discussion_points\": \"TestNG annotations hierarchy, test execution flow, setup and teardown methods\",\n    \"follow_up\": \"How would you handle test data setup that needs to run only once for all tests in a class?\",\n    \"explanation\": \"@BeforeMethod runs before each test method, ensuring fresh setup per test execution\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume states you implemented Page Object Model (POM) framework. Given this code snippet:\\n```java\\npublic class LoginPage {\\n    WebDriver driver;\\n    @FindBy(id=\\\"username\\\")\\n    WebElement usernameField;\\n    \\n    public LoginPage(WebDriver driver) {\\n        this.driver = driver;\\n        // What is missing here?\\n    }\\n}\\n```\\nWhat is the missing critical step to make @FindBy annotations work?\",\n    \"options\": [\n      \"driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\",\n      \"PageFactory.initElements(driver, this);\",\n      \"new WebDriverWait(driver, 10);\",\n      \"driver.findElement(By.id(\\\"username\\\"));\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Validates hands-on POM implementation knowledge and PageFactory usage\",\n    \"discussion_points\": \"PageFactory initialization, lazy initialization, @FindBy vs @FindBys, element locator strategies\",\n    \"follow_up\": \"What are the advantages and disadvantages of using PageFactory compared to traditional findElement approach?\",\n    \"explanation\": \"PageFactory.initElements initializes web elements annotated with @FindBy in POM classes\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured method chain correctly validates that a GET request to '/users/123' returns status code 200 and contains a field 'name' with value 'John'?\",\n    \"options\": [\n      \"given().when().get(\\\"/users/123\\\").then().statusCode(200).body(\\\"name\\\", equalTo(\\\"John\\\"));\",\n      \"RestAssured.get(\\\"/users/123\\\").then().assertThat().statusCode(200).and().body(\\\"name\\\").equals(\\\"John\\\");\",\n      \"when().get(\\\"/users/123\\\").expect().statusCode(200).body(\\\"name\\\", is(\\\"John\\\"));\",\n      \"given().get(\\\"/users/123\\\").then().status(200).body(\\\"name\\\").contains(\\\"John\\\");\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Rest Assured\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Tests practical API testing implementation skills with Rest Assured syntax\",\n    \"discussion_points\": \"Rest Assured BDD syntax, Hamcrest matchers, response validation, request specifications\",\n    \"follow_up\": \"How would you extract and reuse the authentication token from a login API response in subsequent requests?\",\n    \"explanation\": \"Correct Rest Assured BDD syntax: given-when-then with statusCode and Hamcrest matcher equalTo\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, and each test takes 10 minutes sequentially, what is the minimum total execution time if parallel execution is optimally configured?\",\n    \"options\": [\n      \"10 minutes\",\n      \"20 minutes\",\n      \"30 minutes\",\n      \"50 minutes\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Jenkins\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Assesses understanding of parallel execution optimization and CI/CD pipeline efficiency\",\n    \"discussion_points\": \"TestNG parallel execution modes, Jenkins distributed builds, thread-count configuration, resource optimization\",\n    \"follow_up\": \"What TestNG XML configuration would you use to achieve this parallel execution across multiple classes?\",\n    \"explanation\": \"3 nodes run 3 tests in 10 min, then 2 remaining tests in next 10 min = 20 minutes total\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment and reduced regression testing effort from 5 days to 1 day. What was likely the MOST critical factor in achieving this 80% reduction?\",\n    \"options\": [\n      \"Increasing the number of manual testers on the team\",\n      \"Implementing comprehensive automation coverage with parallel execution and CI/CD integration\",\n      \"Reducing the scope of regression testing by removing low-priority test cases\",\n      \"Conducting regression testing only once per sprint instead of multiple times\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Test Automation Strategy\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Leadership / Behavioral\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Evaluates understanding of automation impact, strategic thinking, and team collaboration in Agile context\",\n    \"discussion_points\": \"Automation ROI, test coverage strategy, CI/CD benefits, stakeholder communication, Agile testing practices\",\n    \"follow_up\": \"How did you prioritize which test cases to automate first to achieve quick wins?\",\n    \"explanation\": \"Automation with parallel execution and CI/CD enables rapid, repeatable testing at scale\",\n    \"source_doc\": \"Resume\"\n  }\n]\n{\n  \"response\": \"\",\n  \"stats\": {\n    \"models\": {\n      \"premium\": {\n        \"api\": {\n          \"totalRequests\": 2,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 40935\n        },\n        \"tokens\": {\n          \"prompt\": 33907,\n          \"candidates\": 3262,\n          \"total\": 37169,\n          \"cached\": 29715,\n          \"thoughts\": 0,\n          \"tool\": 0\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 1,\n      \"totalSuccess\": 1,\n      \"totalFail\": 0,\n      \"totalDurationMs\": 1,\n      \"totalDecisions\": {\n        \"accept\": 0,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 1\n      },\n      \"byName\": {\n        \"attempt_completion\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 1,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 1\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    },\n    \"budgetSpend\": 54.31,\n    \"maxBudget\": 100,\n    \"sessionCost\": 0.092922\n  }\n}\n",
+    "created_at": "2026-07-17T13:25:25.179210",
+    "submitted": true,
+    "candidate_dob": "1999-01-01",
+    "candidate_experience": "5",
+    "terminated": false
+  },
+  "e19cb2cd-91dd-4f22-ae20-a8d0d5d7cf24": {
+    "interviewer_name": "VIVEK GOYAL",
+    "interviewer_email": "vigoyal5@in.ibm.com",
+    "candidate_name": "RAVI KUMAR",
+    "candidate_email": "ravi.kumar@ibm.com",
+    "difficulty": "easy",
+    "question_count": 10,
+    "questions": [
+      {
+        "question": "In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?",
+        "options": [
+          "driver.changeFrame(int index)",
+          "driver.frame(int index)",
+          "driver.selectFrame(int index)",
+          "driver.switchTo().frame(int index)"
+        ],
+        "answer_index": 3,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Understanding frame switching is essential for automating web applications with iframes, a common requirement in test automation.",
+        "discussion_points": "Frame handling, WebDriver API methods, switching contexts",
+        "follow_up": "How would you handle a scenario where a frame takes time to load before switching?",
+        "explanation": "switchTo().frame(int index) is the correct WebDriver API method for switching to frames by index.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Which TestNG annotation is used to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeMethod",
+          "@BeforeTest",
+          "@BeforeSuite"
+        ],
+        "answer_index": 1,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "TestNG annotations are fundamental for structuring test automation frameworks and managing test execution lifecycle.",
+        "discussion_points": "TestNG annotations hierarchy, test lifecycle management, setup and teardown methods",
+        "follow_up": "What is the difference between @BeforeMethod and @BeforeClass in terms of execution frequency?",
+        "explanation": "@BeforeMethod executes before each test method, making it ideal for test-level setup operations.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In a Page Object Model (POM) framework, you have a login page class. Which approach correctly implements the page factory pattern?\n\n```java\npublic class LoginPage {\n    WebDriver driver;\n    // Option A\n    @FindBy(id = \"username\")\n    WebElement usernameField;\n    \n    public LoginPage(WebDriver driver) {\n        this.driver = driver;\n        PageFactory.initElements(driver, this);\n    }\n}\n```",
+        "options": [
+          "@FindBy annotation should use xpath instead of id",
+          "PageFactory.initElements should be called before assigning driver",
+          "The code is correct and follows Page Factory pattern properly",
+          "WebElement should be declared as private and accessed via getter methods"
+        ],
+        "answer_index": 2,
+        "skill": "Automation Framework Development",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Page Factory pattern is a core component of POM frameworks, essential for maintaining scalable automation code.",
+        "discussion_points": "Page Object Model, Page Factory, @FindBy annotation, lazy initialization",
+        "follow_up": "What are the advantages of using Page Factory over traditional findElement() calls?",
+        "explanation": "Code correctly implements Page Factory with @FindBy annotation and proper initialization in constructor.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to perform API testing using Rest Assured. Which code snippet correctly sends a GET request and validates the status code is 200?\n\n```java\n// Option A\nRestAssured.given()\n    .when().get(\"/api/users\")\n    .then().statusCode(200);\n```",
+        "options": [
+          "Missing .baseURI() configuration before given()",
+          "Should use .expect().statusCode(200) instead of .then()",
+          "The code is correct",
+          "Should use .post() instead of .get() for validation"
+        ],
+        "answer_index": 2,
+        "skill": "API Testing with Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Rest Assured is explicitly mentioned in the JD for API automation testing, requiring hands-on implementation knowledge.",
+        "discussion_points": "Rest Assured syntax, BDD style API testing, response validation, status code assertions",
+        "follow_up": "How would you extract and validate a specific JSON field from the response body?",
+        "explanation": "The given-when-then syntax is correct Rest Assured pattern for API testing with status validation.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In Maven, which file is used to define project dependencies, plugins, and build configurations?",
+        "options": [
+          "build.gradle",
+          "config.properties",
+          "settings.xml",
+          "pom.xml"
+        ],
+        "answer_index": 3,
+        "skill": "Maven Build Tool",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Maven is a required skill in the JD for managing automation project dependencies and build lifecycle.",
+        "discussion_points": "Maven project structure, dependency management, build lifecycle, pom.xml structure",
+        "follow_up": "What is the difference between <dependencies> and <dependencyManagement> sections in pom.xml?",
+        "explanation": "pom.xml (Project Object Model) is the core Maven configuration file for all project settings.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your Selenium test fails intermittently with 'StaleElementReferenceException'. The element exists but the test fails randomly. What is the most likely cause and solution?",
+        "options": [
+          "Element locator is incorrect; update the XPath or CSS selector",
+          "Page is refreshing or DOM is being updated; implement explicit wait or re-locate element",
+          "WebDriver session has expired; restart the browser",
+          "Element is hidden; use JavaScriptExecutor to make it visible"
+        ],
+        "answer_index": 1,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Debugging & Troubleshooting",
+        "experience_level": "0-3 Years",
+        "reason": "Handling exceptions and debugging flaky tests is a critical skill for maintaining reliable automation suites.",
+        "discussion_points": "StaleElementReferenceException, DOM updates, explicit waits, element re-location strategies",
+        "follow_up": "How would you implement a retry mechanism for handling stale element exceptions?",
+        "explanation": "StaleElementReferenceException occurs when DOM updates; re-locating element or using waits resolves this.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You are integrating your Selenium automation suite with Jenkins CI/CD pipeline. Which Jenkins plugin is specifically designed for executing Maven-based test projects?",
+        "options": [
+          "Maven Integration Plugin",
+          "Git Plugin",
+          "JUnit Plugin",
+          "Pipeline Plugin"
+        ],
+        "answer_index": 0,
+        "skill": "CI/CD with Jenkins",
+        "domain": "DevOps",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Jenkins integration is explicitly required in the JD for automating test execution in CI/CD pipelines.",
+        "discussion_points": "Jenkins plugins, Maven integration, CI/CD automation, build triggers, test reporting",
+        "follow_up": "How would you configure Jenkins to trigger tests automatically on every Git commit?",
+        "explanation": "Maven Integration Plugin enables Jenkins to build and execute Maven projects including test suites.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your team is following Agile Scrum methodology. During Sprint Planning, the Product Owner presents a new user story requiring automation. As a Senior Test Automation Engineer, what should be your immediate responsibility?",
+        "options": [
+          "Start writing automation scripts immediately to save time",
+          "Assign the task to junior engineers and focus on framework maintenance",
+          "Analyze requirements, ask clarifying questions, estimate effort, and identify testable scenarios",
+          "Wait until development is complete before planning test automation"
+        ],
+        "answer_index": 2,
+        "skill": "Agile and Scrum Methodologies",
+        "domain": "Soft Skills",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "The JD requires participation in Agile ceremonies and collaboration with cross-functional teams, testing Agile understanding.",
+        "discussion_points": "Sprint Planning, requirement analysis, test scenario identification, effort estimation, collaboration",
+        "follow_up": "How would you handle a situation where automation effort exceeds the sprint capacity?",
+        "explanation": "Analyzing requirements and estimating effort during Sprint Planning ensures proper test coverage and planning.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to validate data in a MySQL database after executing a test. Which Java code snippet correctly establishes a database connection and executes a SELECT query?\n\n```java\n// Option A\nConnection conn = DriverManager.getConnection(url, user, password);\nStatement stmt = conn.createStatement();\nResultSet rs = stmt.executeQuery(\"SELECT * FROM users WHERE id=1\");\n```",
+        "options": [
+          "Should use executeUpdate() instead of executeQuery() for SELECT",
+          "Should use PreparedStatement instead of Statement for all queries",
+          "Missing Class.forName() to load JDBC driver",
+          "The code is correct"
+        ],
+        "answer_index": 3,
+        "skill": "SQL and Database Validation",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Database validation is a required skill in the JD for verifying data integrity in automated tests.",
+        "discussion_points": "JDBC connection, SQL queries, ResultSet handling, database validation in automation",
+        "follow_up": "Why would you prefer PreparedStatement over Statement for parameterized queries?",
+        "explanation": "Code correctly establishes connection and executes SELECT query using Statement and executeQuery method.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your automation framework uses a Data-Driven approach with TestNG. You have test data in an Excel file. Which TestNG feature allows you to parameterize tests and run them with multiple data sets?",
+        "options": [
+          "@Parameters annotation with testng.xml",
+          "@DataProvider annotation with a method returning Object[][]",
+          "@Factory annotation for creating test instances",
+          "@Test(invocationCount) for repeating tests"
+        ],
+        "answer_index": 1,
+        "skill": "Automation Framework Development",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Data-Driven framework development is explicitly mentioned in the JD as a required automation framework pattern.",
+        "discussion_points": "Data-Driven testing, @DataProvider, parameterization, Excel integration, test data management",
+        "follow_up": "How would you read data from an Excel file and supply it to a @DataProvider method?",
+        "explanation": "@DataProvider returns Object[][] allowing multiple data sets to be passed to test methods dynamically.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your resume mentions you developed a Selenium automation framework using Java, TestNG, and Maven. In TestNG, which annotation would you use to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeTest",
+          "@BeforeMethod",
+          "@BeforeSuite"
+        ],
+        "answer_index": 2,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Tests understanding of TestNG lifecycle annotations critical for framework design",
+        "discussion_points": "TestNG annotations hierarchy, test execution flow, setup and teardown methods",
+        "follow_up": "How would you handle test data setup that needs to run only once for all tests?",
+        "explanation": "@BeforeMethod runs before each test method, ensuring fresh setup per test execution",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you automated over 1,000 regression test cases with 85% automation coverage. When implementing Page Object Model in Selenium, which approach correctly initializes web elements?\n\n```java\npublic class LoginPage {\n    WebDriver driver;\n    // Which initialization is correct?\n}\n```",
+        "options": [
+          "WebElement username = driver.findElement(By.id(\"user\")); in constructor",
+          "WebElement username; then username = new WebElement(By.id(\"user\"));",
+          "@FindBy(id = \"user\") WebElement username; with PageFactory.initElements()",
+          "driver.findElement(By.id(\"user\")).click(); directly in test methods"
+        ],
+        "answer_index": 2,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Validates practical knowledge of POM design pattern mentioned in resume",
+        "discussion_points": "PageFactory benefits, lazy initialization, element locator strategies, StaleElementReferenceException handling",
+        "follow_up": "How would you handle dynamic elements that appear after AJAX calls in your POM?",
+        "explanation": "@FindBy with PageFactory.initElements() is standard POM pattern for lazy element initialization",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured code correctly validates that a GET response returns status 200 and contains a specific JSON field 'userId'?",
+        "options": [
+          "given().when().get(\"/api/user\").then().statusCode(200).body(\"userId\", notNullValue());",
+          "RestAssured.get(\"/api/user\").assertEquals(200).assertField(\"userId\");",
+          "given().get(\"/api/user\").validate().status(200).field(\"userId\").exists();",
+          "when().request(\"/api/user\").then().checkStatus(200).verifyField(\"userId\");"
+        ],
+        "answer_index": 0,
+        "skill": "Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Assesses hands-on API testing skills with Rest Assured syntax and validation",
+        "discussion_points": "Rest Assured BDD syntax, response validation, Hamcrest matchers, JSON path expressions",
+        "follow_up": "How would you extract and reuse an authentication token from one API call in subsequent requests?",
+        "explanation": "given().when().get().then() follows Rest Assured's BDD syntax with proper status and body validation",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, which TestNG configuration ensures optimal parallel execution?\n\n```xml\n<suite name=\"RegressionSuite\" parallel=\"?\" thread-count=\"?\">\n```",
+        "options": [
+          "parallel=\"tests\" thread-count=\"5\"",
+          "parallel=\"instances\" thread-count=\"3\"",
+          "parallel=\"methods\" thread-count=\"5\"",
+          "parallel=\"classes\" thread-count=\"3\""
+        ],
+        "answer_index": 3,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Tests practical understanding of parallel execution optimization mentioned in achievements",
+        "discussion_points": "TestNG parallel execution modes, thread management, resource constraints, Jenkins node allocation",
+        "follow_up": "How would you handle test dependencies when running tests in parallel?",
+        "explanation": "parallel=\"classes\" with thread-count=\"3\" matches available Jenkins nodes for optimal resource utilization",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment, reducing regression testing effort from 5 days to 1 day. During a sprint, a critical production bug is found 2 days before release. The Product Owner wants to add a new feature, but the Developer suggests fixing the bug first. As the Senior Test Automation Engineer, what would be your recommended approach?",
+        "options": [
+          "Prioritize the new feature as requested by Product Owner to meet business goals",
+          "Escalate to management and let them decide the priority",
+          "Run both in parallel by splitting the team to meet all commitments",
+          "Support fixing the critical bug first, then assess if the feature can fit in the sprint"
+        ],
+        "answer_index": 3,
+        "skill": "Agile Collaboration",
+        "domain": "Soft Skills",
+        "question_type": "Leadership / Behavioral",
+        "experience_level": "0-3 Years",
+        "reason": "Evaluates decision-making, stakeholder management, and quality advocacy in Agile context",
+        "discussion_points": "Risk assessment, sprint commitment, quality vs. feature trade-offs, stakeholder communication, production stability",
+        "follow_up": "How would you ensure adequate test coverage for the bug fix within the tight timeline?",
+        "explanation": "Critical bugs threaten production stability; fixing first ensures quality while maintaining realistic sprint scope",
+        "source_doc": "Resume",
+        "section": "B"
+      }
+    ],
+    "section_a": [
+      {
+        "question": "In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?",
+        "options": [
+          "driver.changeFrame(int index)",
+          "driver.frame(int index)",
+          "driver.selectFrame(int index)",
+          "driver.switchTo().frame(int index)"
+        ],
+        "answer_index": 3,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Understanding frame switching is essential for automating web applications with iframes, a common requirement in test automation.",
+        "discussion_points": "Frame handling, WebDriver API methods, switching contexts",
+        "follow_up": "How would you handle a scenario where a frame takes time to load before switching?",
+        "explanation": "switchTo().frame(int index) is the correct WebDriver API method for switching to frames by index.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Which TestNG annotation is used to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeMethod",
+          "@BeforeTest",
+          "@BeforeSuite"
+        ],
+        "answer_index": 1,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "TestNG annotations are fundamental for structuring test automation frameworks and managing test execution lifecycle.",
+        "discussion_points": "TestNG annotations hierarchy, test lifecycle management, setup and teardown methods",
+        "follow_up": "What is the difference between @BeforeMethod and @BeforeClass in terms of execution frequency?",
+        "explanation": "@BeforeMethod executes before each test method, making it ideal for test-level setup operations.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In a Page Object Model (POM) framework, you have a login page class. Which approach correctly implements the page factory pattern?\n\n```java\npublic class LoginPage {\n    WebDriver driver;\n    // Option A\n    @FindBy(id = \"username\")\n    WebElement usernameField;\n    \n    public LoginPage(WebDriver driver) {\n        this.driver = driver;\n        PageFactory.initElements(driver, this);\n    }\n}\n```",
+        "options": [
+          "@FindBy annotation should use xpath instead of id",
+          "PageFactory.initElements should be called before assigning driver",
+          "The code is correct and follows Page Factory pattern properly",
+          "WebElement should be declared as private and accessed via getter methods"
+        ],
+        "answer_index": 2,
+        "skill": "Automation Framework Development",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Page Factory pattern is a core component of POM frameworks, essential for maintaining scalable automation code.",
+        "discussion_points": "Page Object Model, Page Factory, @FindBy annotation, lazy initialization",
+        "follow_up": "What are the advantages of using Page Factory over traditional findElement() calls?",
+        "explanation": "Code correctly implements Page Factory with @FindBy annotation and proper initialization in constructor.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to perform API testing using Rest Assured. Which code snippet correctly sends a GET request and validates the status code is 200?\n\n```java\n// Option A\nRestAssured.given()\n    .when().get(\"/api/users\")\n    .then().statusCode(200);\n```",
+        "options": [
+          "Missing .baseURI() configuration before given()",
+          "Should use .expect().statusCode(200) instead of .then()",
+          "The code is correct",
+          "Should use .post() instead of .get() for validation"
+        ],
+        "answer_index": 2,
+        "skill": "API Testing with Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Rest Assured is explicitly mentioned in the JD for API automation testing, requiring hands-on implementation knowledge.",
+        "discussion_points": "Rest Assured syntax, BDD style API testing, response validation, status code assertions",
+        "follow_up": "How would you extract and validate a specific JSON field from the response body?",
+        "explanation": "The given-when-then syntax is correct Rest Assured pattern for API testing with status validation.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In Maven, which file is used to define project dependencies, plugins, and build configurations?",
+        "options": [
+          "build.gradle",
+          "config.properties",
+          "settings.xml",
+          "pom.xml"
+        ],
+        "answer_index": 3,
+        "skill": "Maven Build Tool",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Maven is a required skill in the JD for managing automation project dependencies and build lifecycle.",
+        "discussion_points": "Maven project structure, dependency management, build lifecycle, pom.xml structure",
+        "follow_up": "What is the difference between <dependencies> and <dependencyManagement> sections in pom.xml?",
+        "explanation": "pom.xml (Project Object Model) is the core Maven configuration file for all project settings.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your Selenium test fails intermittently with 'StaleElementReferenceException'. The element exists but the test fails randomly. What is the most likely cause and solution?",
+        "options": [
+          "Element locator is incorrect; update the XPath or CSS selector",
+          "Page is refreshing or DOM is being updated; implement explicit wait or re-locate element",
+          "WebDriver session has expired; restart the browser",
+          "Element is hidden; use JavaScriptExecutor to make it visible"
+        ],
+        "answer_index": 1,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Debugging & Troubleshooting",
+        "experience_level": "0-3 Years",
+        "reason": "Handling exceptions and debugging flaky tests is a critical skill for maintaining reliable automation suites.",
+        "discussion_points": "StaleElementReferenceException, DOM updates, explicit waits, element re-location strategies",
+        "follow_up": "How would you implement a retry mechanism for handling stale element exceptions?",
+        "explanation": "StaleElementReferenceException occurs when DOM updates; re-locating element or using waits resolves this.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You are integrating your Selenium automation suite with Jenkins CI/CD pipeline. Which Jenkins plugin is specifically designed for executing Maven-based test projects?",
+        "options": [
+          "Maven Integration Plugin",
+          "Git Plugin",
+          "JUnit Plugin",
+          "Pipeline Plugin"
+        ],
+        "answer_index": 0,
+        "skill": "CI/CD with Jenkins",
+        "domain": "DevOps",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Jenkins integration is explicitly required in the JD for automating test execution in CI/CD pipelines.",
+        "discussion_points": "Jenkins plugins, Maven integration, CI/CD automation, build triggers, test reporting",
+        "follow_up": "How would you configure Jenkins to trigger tests automatically on every Git commit?",
+        "explanation": "Maven Integration Plugin enables Jenkins to build and execute Maven projects including test suites.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your team is following Agile Scrum methodology. During Sprint Planning, the Product Owner presents a new user story requiring automation. As a Senior Test Automation Engineer, what should be your immediate responsibility?",
+        "options": [
+          "Start writing automation scripts immediately to save time",
+          "Assign the task to junior engineers and focus on framework maintenance",
+          "Analyze requirements, ask clarifying questions, estimate effort, and identify testable scenarios",
+          "Wait until development is complete before planning test automation"
+        ],
+        "answer_index": 2,
+        "skill": "Agile and Scrum Methodologies",
+        "domain": "Soft Skills",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "The JD requires participation in Agile ceremonies and collaboration with cross-functional teams, testing Agile understanding.",
+        "discussion_points": "Sprint Planning, requirement analysis, test scenario identification, effort estimation, collaboration",
+        "follow_up": "How would you handle a situation where automation effort exceeds the sprint capacity?",
+        "explanation": "Analyzing requirements and estimating effort during Sprint Planning ensures proper test coverage and planning.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to validate data in a MySQL database after executing a test. Which Java code snippet correctly establishes a database connection and executes a SELECT query?\n\n```java\n// Option A\nConnection conn = DriverManager.getConnection(url, user, password);\nStatement stmt = conn.createStatement();\nResultSet rs = stmt.executeQuery(\"SELECT * FROM users WHERE id=1\");\n```",
+        "options": [
+          "Should use executeUpdate() instead of executeQuery() for SELECT",
+          "Should use PreparedStatement instead of Statement for all queries",
+          "Missing Class.forName() to load JDBC driver",
+          "The code is correct"
+        ],
+        "answer_index": 3,
+        "skill": "SQL and Database Validation",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Database validation is a required skill in the JD for verifying data integrity in automated tests.",
+        "discussion_points": "JDBC connection, SQL queries, ResultSet handling, database validation in automation",
+        "follow_up": "Why would you prefer PreparedStatement over Statement for parameterized queries?",
+        "explanation": "Code correctly establishes connection and executes SELECT query using Statement and executeQuery method.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your automation framework uses a Data-Driven approach with TestNG. You have test data in an Excel file. Which TestNG feature allows you to parameterize tests and run them with multiple data sets?",
+        "options": [
+          "@Parameters annotation with testng.xml",
+          "@DataProvider annotation with a method returning Object[][]",
+          "@Factory annotation for creating test instances",
+          "@Test(invocationCount) for repeating tests"
+        ],
+        "answer_index": 1,
+        "skill": "Automation Framework Development",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Data-Driven framework development is explicitly mentioned in the JD as a required automation framework pattern.",
+        "discussion_points": "Data-Driven testing, @DataProvider, parameterization, Excel integration, test data management",
+        "follow_up": "How would you read data from an Excel file and supply it to a @DataProvider method?",
+        "explanation": "@DataProvider returns Object[][] allowing multiple data sets to be passed to test methods dynamically.",
+        "source_doc": "Job Description",
+        "section": "A"
+      }
+    ],
+    "section_b": [
+      {
+        "question": "Your resume mentions you developed a Selenium automation framework using Java, TestNG, and Maven. In TestNG, which annotation would you use to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeTest",
+          "@BeforeMethod",
+          "@BeforeSuite"
+        ],
+        "answer_index": 2,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Tests understanding of TestNG lifecycle annotations critical for framework design",
+        "discussion_points": "TestNG annotations hierarchy, test execution flow, setup and teardown methods",
+        "follow_up": "How would you handle test data setup that needs to run only once for all tests?",
+        "explanation": "@BeforeMethod runs before each test method, ensuring fresh setup per test execution",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you automated over 1,000 regression test cases with 85% automation coverage. When implementing Page Object Model in Selenium, which approach correctly initializes web elements?\n\n```java\npublic class LoginPage {\n    WebDriver driver;\n    // Which initialization is correct?\n}\n```",
+        "options": [
+          "WebElement username = driver.findElement(By.id(\"user\")); in constructor",
+          "WebElement username; then username = new WebElement(By.id(\"user\"));",
+          "@FindBy(id = \"user\") WebElement username; with PageFactory.initElements()",
+          "driver.findElement(By.id(\"user\")).click(); directly in test methods"
+        ],
+        "answer_index": 2,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Validates practical knowledge of POM design pattern mentioned in resume",
+        "discussion_points": "PageFactory benefits, lazy initialization, element locator strategies, StaleElementReferenceException handling",
+        "follow_up": "How would you handle dynamic elements that appear after AJAX calls in your POM?",
+        "explanation": "@FindBy with PageFactory.initElements() is standard POM pattern for lazy element initialization",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured code correctly validates that a GET response returns status 200 and contains a specific JSON field 'userId'?",
+        "options": [
+          "given().when().get(\"/api/user\").then().statusCode(200).body(\"userId\", notNullValue());",
+          "RestAssured.get(\"/api/user\").assertEquals(200).assertField(\"userId\");",
+          "given().get(\"/api/user\").validate().status(200).field(\"userId\").exists();",
+          "when().request(\"/api/user\").then().checkStatus(200).verifyField(\"userId\");"
+        ],
+        "answer_index": 0,
+        "skill": "Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Assesses hands-on API testing skills with Rest Assured syntax and validation",
+        "discussion_points": "Rest Assured BDD syntax, response validation, Hamcrest matchers, JSON path expressions",
+        "follow_up": "How would you extract and reuse an authentication token from one API call in subsequent requests?",
+        "explanation": "given().when().get().then() follows Rest Assured's BDD syntax with proper status and body validation",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, which TestNG configuration ensures optimal parallel execution?\n\n```xml\n<suite name=\"RegressionSuite\" parallel=\"?\" thread-count=\"?\">\n```",
+        "options": [
+          "parallel=\"tests\" thread-count=\"5\"",
+          "parallel=\"instances\" thread-count=\"3\"",
+          "parallel=\"methods\" thread-count=\"5\"",
+          "parallel=\"classes\" thread-count=\"3\""
+        ],
+        "answer_index": 3,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Tests practical understanding of parallel execution optimization mentioned in achievements",
+        "discussion_points": "TestNG parallel execution modes, thread management, resource constraints, Jenkins node allocation",
+        "follow_up": "How would you handle test dependencies when running tests in parallel?",
+        "explanation": "parallel=\"classes\" with thread-count=\"3\" matches available Jenkins nodes for optimal resource utilization",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment, reducing regression testing effort from 5 days to 1 day. During a sprint, a critical production bug is found 2 days before release. The Product Owner wants to add a new feature, but the Developer suggests fixing the bug first. As the Senior Test Automation Engineer, what would be your recommended approach?",
+        "options": [
+          "Prioritize the new feature as requested by Product Owner to meet business goals",
+          "Escalate to management and let them decide the priority",
+          "Run both in parallel by splitting the team to meet all commitments",
+          "Support fixing the critical bug first, then assess if the feature can fit in the sprint"
+        ],
+        "answer_index": 3,
+        "skill": "Agile Collaboration",
+        "domain": "Soft Skills",
+        "question_type": "Leadership / Behavioral",
+        "experience_level": "0-3 Years",
+        "reason": "Evaluates decision-making, stakeholder management, and quality advocacy in Agile context",
+        "discussion_points": "Risk assessment, sprint commitment, quality vs. feature trade-offs, stakeholder communication, production stability",
+        "follow_up": "How would you ensure adequate test coverage for the bug fix within the tight timeline?",
+        "explanation": "Critical bugs threaten production stability; fixing first ensures quality while maintaining realistic sprint scope",
+        "source_doc": "Resume",
+        "section": "B"
+      }
+    ],
+    "count_a": 10,
+    "count_b": 5,
+    "bob_command": "C:\\Users\\VivekGoyal\\AppData\\Roaming\\npm\\bob.cmd --accept-license --hide-intermediary-output -o json --chat-mode ask < [prompt_stdin]",
+    "bob_logs": "[system] Repositories: Programming Knowledge Repository.md, Testing Knowledge Repository.md, Cloud Technologies Knowledge Repository.md, Data Engineering Knowledge Repository.md, AI & Generative AI Knowledge Repository.md, DevOps Knowledge Repository.md, Soft Skills Knowledge Repository.md\n\n=== SECTION A (10 questions — JD-based) ===\n[bob exit code: 0]\n\n[\n  {\n    \"question\": \"In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?\",\n    \"options\": [\n      \"driver.switchTo().frame(int index)\",\n      \"driver.frame(int index)\",\n      \"driver.selectFrame(int index)\",\n      \"driver.changeFrame(int index)\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Understanding frame switching is essential for automating web applications with iframes, a common requirement in test automation.\",\n    \"discussion_points\": \"Frame handling, WebDriver API methods, switching contexts\",\n    \"follow_up\": \"How would you handle a scenario where a frame takes time to load before switching?\",\n    \"explanation\": \"switchTo().frame(int index) is the correct WebDriver API method for switching to frames by index.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Which TestNG annotation is used to execute a method before each test method in a test class?\",\n    \"options\": [\n      \"@BeforeClass\",\n      \"@BeforeTest\",\n      \"@BeforeMethod\",\n      \"@BeforeSuite\"\n    ],\n    \"answer_index\": 2,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"TestNG annotations are fundamental for structuring test automation frameworks and managing test execution lifecycle.\",\n    \"discussion_points\": \"TestNG annotations hierarchy, test lifecycle management, setup and teardown methods\",\n    \"follow_up\": \"What is the difference between @BeforeMethod and @BeforeClass in terms of execution frequency?\",\n    \"explanation\": \"@BeforeMethod executes before each test method, making it ideal for test-level setup operations.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"In a Page Object Model (POM) framework, you have a login page class. Which approach correctly implements the page factory pattern?\\n\\n```java\\npublic class LoginPage {\\n    WebDriver driver;\\n    // Option A\\n    @FindBy(id = \\\"username\\\")\\n    WebElement usernameField;\\n    \\n    public LoginPage(WebDriver driver) {\\n        this.driver = driver;\\n        PageFactory.initElements(driver, this);\\n    }\\n}\\n```\",\n    \"options\": [\n      \"The code is correct and follows Page Factory pattern properly\",\n      \"PageFactory.initElements should be called before assigning driver\",\n      \"@FindBy annotation should use xpath instead of id\",\n      \"WebElement should be declared as private and accessed via getter methods\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Automation Framework Development\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Page Factory pattern is a core component of POM frameworks, essential for maintaining scalable automation code.\",\n    \"discussion_points\": \"Page Object Model, Page Factory, @FindBy annotation, lazy initialization\",\n    \"follow_up\": \"What are the advantages of using Page Factory over traditional findElement() calls?\",\n    \"explanation\": \"Code correctly implements Page Factory with @FindBy annotation and proper initialization in constructor.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You need to perform API testing using Rest Assured. Which code snippet correctly sends a GET request and validates the status code is 200?\\n\\n```java\\n// Option A\\nRestAssured.given()\\n    .when().get(\\\"/api/users\\\")\\n    .then().statusCode(200);\\n```\",\n    \"options\": [\n      \"The code is correct\",\n      \"Should use .expect().statusCode(200) instead of .then()\",\n      \"Missing .baseURI() configuration before given()\",\n      \"Should use .post() instead of .get() for validation\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"API Testing with Rest Assured\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Rest Assured is explicitly mentioned in the JD for API automation testing, requiring hands-on implementation knowledge.\",\n    \"discussion_points\": \"Rest Assured syntax, BDD style API testing, response validation, status code assertions\",\n    \"follow_up\": \"How would you extract and validate a specific JSON field from the response body?\",\n    \"explanation\": \"The given-when-then syntax is correct Rest Assured pattern for API testing with status validation.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"In Maven, which file is used to define project dependencies, plugins, and build configurations?\",\n    \"options\": [\n      \"build.gradle\",\n      \"pom.xml\",\n      \"settings.xml\",\n      \"config.properties\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Maven Build Tool\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Maven is a required skill in the JD for managing automation project dependencies and build lifecycle.\",\n    \"discussion_points\": \"Maven project structure, dependency management, build lifecycle, pom.xml structure\",\n    \"follow_up\": \"What is the difference between <dependencies> and <dependencyManagement> sections in pom.xml?\",\n    \"explanation\": \"pom.xml (Project Object Model) is the core Maven configuration file for all project settings.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Your Selenium test fails intermittently with 'StaleElementReferenceException'. The element exists but the test fails randomly. What is the most likely cause and solution?\",\n    \"options\": [\n      \"Element locator is incorrect; update the XPath or CSS selector\",\n      \"Page is refreshing or DOM is being updated; implement explicit wait or re-locate element\",\n      \"WebDriver session has expired; restart the browser\",\n      \"Element is hidden; use JavaScriptExecutor to make it visible\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Debugging & Troubleshooting\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Handling exceptions and debugging flaky tests is a critical skill for maintaining reliable automation suites.\",\n    \"discussion_points\": \"StaleElementReferenceException, DOM updates, explicit waits, element re-location strategies\",\n    \"follow_up\": \"How would you implement a retry mechanism for handling stale element exceptions?\",\n    \"explanation\": \"StaleElementReferenceException occurs when DOM updates; re-locating element or using waits resolves this.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You are integrating your Selenium automation suite with Jenkins CI/CD pipeline. Which Jenkins plugin is specifically designed for executing Maven-based test projects?\",\n    \"options\": [\n      \"Git Plugin\",\n      \"Maven Integration Plugin\",\n      \"JUnit Plugin\",\n      \"Pipeline Plugin\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"CI/CD with Jenkins\",\n    \"domain\": \"DevOps\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Jenkins integration is explicitly required in the JD for automating test execution in CI/CD pipelines.\",\n    \"discussion_points\": \"Jenkins plugins, Maven integration, CI/CD automation, build triggers, test reporting\",\n    \"follow_up\": \"How would you configure Jenkins to trigger tests automatically on every Git commit?\",\n    \"explanation\": \"Maven Integration Plugin enables Jenkins to build and execute Maven projects including test suites.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Your team is following Agile Scrum methodology. During Sprint Planning, the Product Owner presents a new user story requiring automation. As a Senior Test Automation Engineer, what should be your immediate responsibility?\",\n    \"options\": [\n      \"Start writing automation scripts immediately to save time\",\n      \"Analyze requirements, ask clarifying questions, estimate effort, and identify testable scenarios\",\n      \"Assign the task to junior engineers and focus on framework maintenance\",\n      \"Wait until development is complete before planning test automation\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Agile and Scrum Methodologies\",\n    \"domain\": \"Soft Skills\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"The JD requires participation in Agile ceremonies and collaboration with cross-functional teams, testing Agile understanding.\",\n    \"discussion_points\": \"Sprint Planning, requirement analysis, test scenario identification, effort estimation, collaboration\",\n    \"follow_up\": \"How would you handle a situation where automation effort exceeds the sprint capacity?\",\n    \"explanation\": \"Analyzing requirements and estimating effort during Sprint Planning ensures proper test coverage and planning.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You need to validate data in a MySQL database after executing a test. Which Java code snippet correctly establishes a database connection and executes a SELECT query?\\n\\n```java\\n// Option A\\nConnection conn = DriverManager.getConnection(url, user, password);\\nStatement stmt = conn.createStatement();\\nResultSet rs = stmt.executeQuery(\\\"SELECT * FROM users WHERE id=1\\\");\\n```\",\n    \"options\": [\n      \"The code is correct\",\n      \"Should use PreparedStatement instead of Statement for all queries\",\n      \"Missing Class.forName() to load JDBC driver\",\n      \"Should use executeUpdate() instead of executeQuery() for SELECT\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"SQL and Database Validation\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Database validation is a required skill in the JD for verifying data integrity in automated tests.\",\n    \"discussion_points\": \"JDBC connection, SQL queries, ResultSet handling, database validation in automation\",\n    \"follow_up\": \"Why would you prefer PreparedStatement over Statement for parameterized queries?\",\n    \"explanation\": \"Code correctly establishes connection and executes SELECT query using Statement and executeQuery method.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Your automation framework uses a Data-Driven approach with TestNG. You have test data in an Excel file. Which TestNG feature allows you to parameterize tests and run them with multiple data sets?\",\n    \"options\": [\n      \"@Parameters annotation with testng.xml\",\n      \"@DataProvider annotation with a method returning Object[][]\",\n      \"@Factory annotation for creating test instances\",\n      \"@Test(invocationCount) for repeating tests\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Automation Framework Development\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Data-Driven framework development is explicitly mentioned in the JD as a required automation framework pattern.\",\n    \"discussion_points\": \"Data-Driven testing, @DataProvider, parameterization, Excel integration, test data management\",\n    \"follow_up\": \"How would you read data from an Excel file and supply it to a @DataProvider method?\",\n    \"explanation\": \"@DataProvider returns Object[][] allowing multiple data sets to be passed to test methods dynamically.\",\n    \"source_doc\": \"Job Description\"\n  }\n]\n{\n  \"response\": \"\",\n  \"stats\": {\n    \"models\": {\n      \"premium\": {\n        \"api\": {\n          \"totalRequests\": 2,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 66634\n        },\n        \"tokens\": {\n          \"prompt\": 34734,\n          \"candidates\": 5808,\n          \"total\": 40542,\n          \"cached\": 15880,\n          \"thoughts\": 0,\n          \"tool\": 0\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 1,\n      \"totalSuccess\": 1,\n      \"totalFail\": 0,\n      \"totalDurationMs\": 3,\n      \"totalDecisions\": {\n        \"accept\": 0,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 1\n      },\n      \"byName\": {\n        \"attempt_completion\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 3,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 1\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    },\n    \"budgetSpend\": 54.41,\n    \"maxBudget\": 100,\n    \"sessionCost\": 0.101354\n  }\n}\n\n\n=== SECTION B (5 questions — Resume-based) ===\n[bob exit code: 0]\n\n[\n  {\n    \"question\": \"Your resume mentions you developed a Selenium automation framework using Java, TestNG, and Maven. In TestNG, which annotation would you use to execute a method before each test method in a test class?\",\n    \"options\": [\n      \"@BeforeClass\",\n      \"@BeforeMethod\",\n      \"@BeforeTest\",\n      \"@BeforeSuite\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Tests understanding of TestNG lifecycle annotations critical for framework design\",\n    \"discussion_points\": \"TestNG annotations hierarchy, test execution flow, setup and teardown methods\",\n    \"follow_up\": \"How would you handle test data setup that needs to run only once for all tests?\",\n    \"explanation\": \"@BeforeMethod runs before each test method, ensuring fresh setup per test execution\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume states you automated over 1,000 regression test cases with 85% automation coverage. When implementing Page Object Model in Selenium, which approach correctly initializes web elements?\\n\\n```java\\npublic class LoginPage {\\n    WebDriver driver;\\n    // Which initialization is correct?\\n}\\n```\",\n    \"options\": [\n      \"WebElement username = driver.findElement(By.id(\\\"user\\\")); in constructor\",\n      \"@FindBy(id = \\\"user\\\") WebElement username; with PageFactory.initElements()\",\n      \"WebElement username; then username = new WebElement(By.id(\\\"user\\\"));\",\n      \"driver.findElement(By.id(\\\"user\\\")).click(); directly in test methods\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Validates practical knowledge of POM design pattern mentioned in resume\",\n    \"discussion_points\": \"PageFactory benefits, lazy initialization, element locator strategies, StaleElementReferenceException handling\",\n    \"follow_up\": \"How would you handle dynamic elements that appear after AJAX calls in your POM?\",\n    \"explanation\": \"@FindBy with PageFactory.initElements() is standard POM pattern for lazy element initialization\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured code correctly validates that a GET response returns status 200 and contains a specific JSON field 'userId'?\",\n    \"options\": [\n      \"given().when().get(\\\"/api/user\\\").then().statusCode(200).body(\\\"userId\\\", notNullValue());\",\n      \"RestAssured.get(\\\"/api/user\\\").assertEquals(200).assertField(\\\"userId\\\");\",\n      \"given().get(\\\"/api/user\\\").validate().status(200).field(\\\"userId\\\").exists();\",\n      \"when().request(\\\"/api/user\\\").then().checkStatus(200).verifyField(\\\"userId\\\");\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Rest Assured\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Assesses hands-on API testing skills with Rest Assured syntax and validation\",\n    \"discussion_points\": \"Rest Assured BDD syntax, response validation, Hamcrest matchers, JSON path expressions\",\n    \"follow_up\": \"How would you extract and reuse an authentication token from one API call in subsequent requests?\",\n    \"explanation\": \"given().when().get().then() follows Rest Assured's BDD syntax with proper status and body validation\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, which TestNG configuration ensures optimal parallel execution?\\n\\n```xml\\n<suite name=\\\"RegressionSuite\\\" parallel=\\\"?\\\" thread-count=\\\"?\\\">\\n```\",\n    \"options\": [\n      \"parallel=\\\"tests\\\" thread-count=\\\"5\\\"\",\n      \"parallel=\\\"classes\\\" thread-count=\\\"3\\\"\",\n      \"parallel=\\\"methods\\\" thread-count=\\\"5\\\"\",\n      \"parallel=\\\"instances\\\" thread-count=\\\"3\\\"\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Tests practical understanding of parallel execution optimization mentioned in achievements\",\n    \"discussion_points\": \"TestNG parallel execution modes, thread management, resource constraints, Jenkins node allocation\",\n    \"follow_up\": \"How would you handle test dependencies when running tests in parallel?\",\n    \"explanation\": \"parallel=\\\"classes\\\" with thread-count=\\\"3\\\" matches available Jenkins nodes for optimal resource utilization\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment, reducing regression testing effort from 5 days to 1 day. During a sprint, a critical production bug is found 2 days before release. The Product Owner wants to add a new feature, but the Developer suggests fixing the bug first. As the Senior Test Automation Engineer, what would be your recommended approach?\",\n    \"options\": [\n      \"Prioritize the new feature as requested by Product Owner to meet business goals\",\n      \"Support fixing the critical bug first, then assess if the feature can fit in the sprint\",\n      \"Run both in parallel by splitting the team to meet all commitments\",\n      \"Escalate to management and let them decide the priority\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Agile Collaboration\",\n    \"domain\": \"Soft Skills\",\n    \"question_type\": \"Leadership / Behavioral\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Evaluates decision-making, stakeholder management, and quality advocacy in Agile context\",\n    \"discussion_points\": \"Risk assessment, sprint commitment, quality vs. feature trade-offs, stakeholder communication, production stability\",\n    \"follow_up\": \"How would you ensure adequate test coverage for the bug fix within the tight timeline?\",\n    \"explanation\": \"Critical bugs threaten production stability; fixing first ensures quality while maintaining realistic sprint scope\",\n    \"source_doc\": \"Resume\"\n  }\n]\n{\n  \"response\": \"\",\n  \"stats\": {\n    \"models\": {\n      \"premium\": {\n        \"api\": {\n          \"totalRequests\": 2,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 40468\n        },\n        \"tokens\": {\n          \"prompt\": 33946,\n          \"candidates\": 3264,\n          \"total\": 37210,\n          \"cached\": 29752,\n          \"thoughts\": 0,\n          \"tool\": 0\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 1,\n      \"totalSuccess\": 1,\n      \"totalFail\": 0,\n      \"totalDurationMs\": 1,\n      \"totalDecisions\": {\n        \"accept\": 0,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 1\n      },\n      \"byName\": {\n        \"attempt_completion\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 1,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 1\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    },\n    \"budgetSpend\": 54.5,\n    \"maxBudget\": 100,\n    \"sessionCost\": 0.093024\n  }\n}\n",
+    "created_at": "2026-07-17T13:33:45.802741",
+    "submitted": true,
+    "candidate_dob": "1994-08-02",
+    "candidate_experience": "3",
+    "terminated": false
+  },
+  "42694522-d6df-4684-b203-20e9f17cd5ea": {
+    "interviewer_name": "Vivek Goyal",
+    "interviewer_email": "vigoyal5@in.ibm.com",
+    "candidate_name": "Ravi Kumar",
+    "candidate_email": "ravi.kumar@ibm.com",
+    "difficulty": "easy",
+    "question_count": 10,
+    "questions": [
+      {
+        "question": "In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?",
+        "options": [
+          "driver.focusFrame(int index)",
+          "driver.changeFrame(int index)",
+          "driver.selectFrame(int index)",
+          "driver.switchTo().frame(int index)"
+        ],
+        "answer_index": 3,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Understanding frame switching is essential for automating web applications with iframes, a common requirement in functional testing.",
+        "discussion_points": "Frame handling, WebDriver API methods, switching contexts",
+        "follow_up": "How would you handle a scenario where the frame doesn't have an index but has a name or WebElement?",
+        "explanation": "switchTo().frame(int index) is the correct WebDriver API method for switching to frames by index.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You are designing a Page Object Model (POM) framework. Which annotation in TestNG would you use to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeSuite",
+          "@BeforeTest",
+          "@BeforeClass",
+          "@BeforeMethod"
+        ],
+        "answer_index": 3,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "TestNG annotations are fundamental for structuring test execution flow in automation frameworks, directly mentioned in the JD.",
+        "discussion_points": "TestNG lifecycle annotations, test setup and teardown, framework design",
+        "follow_up": "What is the difference between @BeforeTest and @BeforeClass in TestNG?",
+        "explanation": "@BeforeMethod executes before each test method, ideal for test-level setup in POM frameworks.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In Maven, which file contains project dependencies and build configuration?",
+        "options": [
+          "build.gradle",
+          "pom.xml",
+          "settings.xml",
+          "dependencies.config"
+        ],
+        "answer_index": 1,
+        "skill": "Maven",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Maven is explicitly required in the JD for managing build tools and dependencies in automation projects.",
+        "discussion_points": "Maven project structure, dependency management, build lifecycle",
+        "follow_up": "How do you add a Selenium WebDriver dependency in pom.xml?",
+        "explanation": "pom.xml (Project Object Model) is Maven's core configuration file for dependencies and build settings.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Which Rest Assured method is used to send a GET request to an API endpoint and validate the response status code is 200?\n\n```java\ngiven().\n    baseUri(\"https://api.example.com\").\nwhen().\n    get(\"/users\").\nthen().\n    ______;\n```",
+        "options": [
+          "assertThat().statusCode(200)",
+          "checkStatusCode(200)",
+          "validateStatus(200)",
+          "statusCode(200)"
+        ],
+        "answer_index": 3,
+        "skill": "Rest Assured API Testing",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "API automation using Rest Assured is a key responsibility mentioned in the JD for validating web services.",
+        "discussion_points": "Rest Assured syntax, API testing, response validation, BDD style",
+        "follow_up": "How would you extract and validate a specific JSON field from the response body?",
+        "explanation": "statusCode(200) is the correct Rest Assured method for validating HTTP response status codes.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your automation suite needs to run tests on Chrome, Firefox, and Edge browsers. Which design pattern would you implement to initialize different browser drivers efficiently?",
+        "options": [
+          "Factory Pattern",
+          "Singleton Pattern",
+          "Observer Pattern",
+          "Builder Pattern"
+        ],
+        "answer_index": 0,
+        "skill": "Automation Framework Development",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Framework development with cross-browser support is a core responsibility in the JD requiring design pattern knowledge.",
+        "discussion_points": "Design patterns in test automation, browser driver management, framework scalability",
+        "follow_up": "How would you implement the Factory Pattern for WebDriver initialization?",
+        "explanation": "Factory Pattern is ideal for creating different browser driver instances based on runtime configuration.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In a Data-Driven framework, you are reading test data from an Excel file. Which Java library is commonly used to read Excel files in Selenium automation?",
+        "options": [
+          "ExcelReader",
+          "JExcel",
+          "Apache POI",
+          "DataProvider"
+        ],
+        "answer_index": 2,
+        "skill": "Data-Driven Framework",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Data-Driven framework development is explicitly mentioned in the JD as a required automation framework type.",
+        "discussion_points": "Data-driven testing, external data sources, Apache POI API, test parameterization",
+        "follow_up": "How would you handle multiple sheets in an Excel workbook for different test scenarios?",
+        "explanation": "Apache POI is the standard Java library for reading and writing Excel files in automation.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to integrate your Selenium test suite with Jenkins for CI/CD. Which Jenkins plugin is specifically designed to execute Maven projects?",
+        "options": [
+          "Maven Integration Plugin",
+          "Git Plugin",
+          "TestNG Plugin",
+          "Selenium Plugin"
+        ],
+        "answer_index": 0,
+        "skill": "CI/CD Integration",
+        "domain": "DevOps",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "CI/CD integration with Jenkins is a key responsibility in the JD for automating test execution pipelines.",
+        "discussion_points": "Jenkins configuration, Maven build automation, CI/CD pipelines, test execution scheduling",
+        "follow_up": "How would you configure Jenkins to trigger tests automatically on every Git commit?",
+        "explanation": "Maven Integration Plugin enables Jenkins to build and execute Maven-based projects including test suites.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your test script fails with 'StaleElementReferenceException' after the page dynamically updates. What is the most appropriate solution?",
+        "options": [
+          "Increase implicit wait time to 30 seconds",
+          "Re-locate the element after the page update before interacting with it",
+          "Use Thread.sleep() before clicking the element",
+          "Refresh the entire page and start over"
+        ],
+        "answer_index": 1,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Debugging & Troubleshooting",
+        "experience_level": "0-3 Years",
+        "reason": "Debugging common Selenium exceptions is essential for maintaining robust automation scripts as per JD requirements.",
+        "discussion_points": "StaleElementReferenceException, DOM updates, element re-location strategies, exception handling",
+        "follow_up": "How would you implement a retry mechanism for stale element scenarios?",
+        "explanation": "Re-locating the element after DOM changes ensures a fresh reference, resolving StaleElementReferenceException effectively.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "During a sprint, the Product Owner requests adding 15 new test scenarios, but only 3 days remain. As a Senior Test Automation Engineer, what is your best approach?",
+        "options": [
+          "Accept all 15 scenarios and work overtime to complete them",
+          "Prioritize scenarios based on business impact and risk, automate critical ones first, and discuss capacity with the team",
+          "Reject the request entirely and stick to the original plan",
+          "Automate all scenarios quickly without proper framework integration"
+        ],
+        "answer_index": 1,
+        "skill": "Agile Collaboration",
+        "domain": "Soft Skills",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Agile collaboration and sprint planning are explicitly mentioned in the JD as key responsibilities for the role.",
+        "discussion_points": "Agile ceremonies, prioritization, stakeholder communication, capacity planning, risk-based testing",
+        "follow_up": "How would you communicate the trade-offs to the Product Owner and the team?",
+        "explanation": "Prioritizing based on risk and collaborating with the team aligns with Agile principles and JD expectations.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In Git, which command would you use to create a new branch named 'feature-automation' and switch to it immediately?",
+        "options": [
+          "git branch feature-automation && git checkout feature-automation",
+          "git checkout -b feature-automation",
+          "git create feature-automation",
+          "git switch --new feature-automation"
+        ],
+        "answer_index": 1,
+        "skill": "Git Version Control",
+        "domain": "DevOps",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Git is explicitly required in the JD for source control management in collaborative automation development.",
+        "discussion_points": "Git branching strategies, version control workflows, collaboration in teams",
+        "follow_up": "How would you merge your feature branch back into the main branch after code review?",
+        "explanation": "git checkout -b creates a new branch and switches to it in one command, standard practice.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your resume mentions you developed a Selenium automation framework using Java, TestNG, and Maven. In TestNG, which annotation would you use to execute a method once before all test methods in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeTest",
+          "@BeforeMethod",
+          "@BeforeSuite"
+        ],
+        "answer_index": 0,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Tests understanding of TestNG lifecycle annotations critical for framework design",
+        "discussion_points": "TestNG annotations hierarchy, test execution order, setup and teardown methods",
+        "follow_up": "How would you handle test data initialization that needs to run once for the entire test suite?",
+        "explanation": "@BeforeClass runs once before all test methods in the current class",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you implemented Page Object Model (POM) framework. Given this LoginPage class snippet:\n```java\npublic class LoginPage {\n    WebDriver driver;\n    @FindBy(id=\"username\")\n    WebElement usernameField;\n    \n    public LoginPage(WebDriver driver) {\n        this.driver = driver;\n        // What is missing here?\n    }\n}\n```\nWhat is the missing critical step in the constructor?",
+        "options": [
+          "driver.get(\"url\")",
+          "driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)",
+          "new WebDriverWait(driver, 10)",
+          "PageFactory.initElements(driver, this)"
+        ],
+        "answer_index": 3,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Validates practical knowledge of POM implementation and PageFactory initialization",
+        "discussion_points": "PageFactory usage, @FindBy annotations, lazy initialization, element location strategies",
+        "follow_up": "What are the advantages of using PageFactory over traditional driver.findElement() approach?",
+        "explanation": "PageFactory.initElements initializes @FindBy annotated WebElements in POM",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured method chain correctly validates that a GET request to '/users/123' returns status code 200 and contains a field 'name' with value 'John'?",
+        "options": [
+          "given().when().get(\"/users/123\").then().statusCode(200).body(\"name\", equalTo(\"John\"))",
+          "RestAssured.get(\"/users/123\").then().assertThat().statusCode(200).and().body(\"name\").equals(\"John\")",
+          "given().get(\"/users/123\").expect().statusCode(200).body(\"name\", is(\"John\"))",
+          "when().get(\"/users/123\").then().status(200).body(\"name\").equalTo(\"John\")"
+        ],
+        "answer_index": 0,
+        "skill": "Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Tests hands-on knowledge of Rest Assured syntax and API validation patterns",
+        "discussion_points": "BDD-style syntax, response validation, Hamcrest matchers, status code assertions",
+        "follow_up": "How would you extract and store a value from the JSON response for use in subsequent API calls?",
+        "explanation": "Correct Rest Assured BDD syntax: given().when().get().then().statusCode().body()",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, and each test takes 10 minutes sequentially, what is the minimum execution time achievable with optimal parallel configuration?",
+        "options": [
+          "20 minutes",
+          "10 minutes",
+          "30 minutes",
+          "50 minutes"
+        ],
+        "answer_index": 0,
+        "skill": "Jenkins",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Evaluates understanding of parallel execution optimization and resource utilization in CI/CD",
+        "discussion_points": "TestNG parallel execution modes, Jenkins node configuration, thread-level vs class-level parallelism, execution optimization",
+        "follow_up": "What TestNG XML configuration would you use to achieve class-level parallel execution?",
+        "explanation": "3 nodes run 3 tests (10 min), then 2 remaining tests (10 min) = 20 minutes total",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment and reduced regression testing effort from 5 days to 1 day. During a sprint, a critical production bug is found 2 days before release. The Product Owner wants to add a new feature, but the Developer suggests fixing the bug first. As the Senior Test Automation Engineer, what should be your recommended approach?",
+        "options": [
+          "Prioritize the new feature as requested by the Product Owner since they own the backlog",
+          "Recommend releasing as planned and fixing the bug in a hotfix after release",
+          "Suggest splitting the team to work on both simultaneously to meet all requirements",
+          "Support fixing the critical bug first, assess regression impact, and defer the feature to next sprint"
+        ],
+        "answer_index": 3,
+        "skill": "Agile Scrum",
+        "domain": "Soft Skills",
+        "question_type": "Leadership / Behavioral",
+        "experience_level": "0-3 Years",
+        "reason": "Assesses decision-making, stakeholder management, and quality advocacy in Agile context",
+        "discussion_points": "Risk assessment, sprint commitment, quality vs velocity, stakeholder communication, technical debt",
+        "follow_up": "How would you communicate this decision to the Product Owner and ensure alignment?",
+        "explanation": "Critical bugs threaten production stability; quality and risk mitigation take precedence",
+        "source_doc": "Resume",
+        "section": "B"
+      }
+    ],
+    "section_a": [
+      {
+        "question": "In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?",
+        "options": [
+          "driver.focusFrame(int index)",
+          "driver.changeFrame(int index)",
+          "driver.selectFrame(int index)",
+          "driver.switchTo().frame(int index)"
+        ],
+        "answer_index": 3,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Understanding frame switching is essential for automating web applications with iframes, a common requirement in functional testing.",
+        "discussion_points": "Frame handling, WebDriver API methods, switching contexts",
+        "follow_up": "How would you handle a scenario where the frame doesn't have an index but has a name or WebElement?",
+        "explanation": "switchTo().frame(int index) is the correct WebDriver API method for switching to frames by index.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You are designing a Page Object Model (POM) framework. Which annotation in TestNG would you use to execute a method before each test method in a test class?",
+        "options": [
+          "@BeforeSuite",
+          "@BeforeTest",
+          "@BeforeClass",
+          "@BeforeMethod"
+        ],
+        "answer_index": 3,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "TestNG annotations are fundamental for structuring test execution flow in automation frameworks, directly mentioned in the JD.",
+        "discussion_points": "TestNG lifecycle annotations, test setup and teardown, framework design",
+        "follow_up": "What is the difference between @BeforeTest and @BeforeClass in TestNG?",
+        "explanation": "@BeforeMethod executes before each test method, ideal for test-level setup in POM frameworks.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In Maven, which file contains project dependencies and build configuration?",
+        "options": [
+          "build.gradle",
+          "pom.xml",
+          "settings.xml",
+          "dependencies.config"
+        ],
+        "answer_index": 1,
+        "skill": "Maven",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Maven is explicitly required in the JD for managing build tools and dependencies in automation projects.",
+        "discussion_points": "Maven project structure, dependency management, build lifecycle",
+        "follow_up": "How do you add a Selenium WebDriver dependency in pom.xml?",
+        "explanation": "pom.xml (Project Object Model) is Maven's core configuration file for dependencies and build settings.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Which Rest Assured method is used to send a GET request to an API endpoint and validate the response status code is 200?\n\n```java\ngiven().\n    baseUri(\"https://api.example.com\").\nwhen().\n    get(\"/users\").\nthen().\n    ______;\n```",
+        "options": [
+          "assertThat().statusCode(200)",
+          "checkStatusCode(200)",
+          "validateStatus(200)",
+          "statusCode(200)"
+        ],
+        "answer_index": 3,
+        "skill": "Rest Assured API Testing",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "API automation using Rest Assured is a key responsibility mentioned in the JD for validating web services.",
+        "discussion_points": "Rest Assured syntax, API testing, response validation, BDD style",
+        "follow_up": "How would you extract and validate a specific JSON field from the response body?",
+        "explanation": "statusCode(200) is the correct Rest Assured method for validating HTTP response status codes.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your automation suite needs to run tests on Chrome, Firefox, and Edge browsers. Which design pattern would you implement to initialize different browser drivers efficiently?",
+        "options": [
+          "Factory Pattern",
+          "Singleton Pattern",
+          "Observer Pattern",
+          "Builder Pattern"
+        ],
+        "answer_index": 0,
+        "skill": "Automation Framework Development",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Framework development with cross-browser support is a core responsibility in the JD requiring design pattern knowledge.",
+        "discussion_points": "Design patterns in test automation, browser driver management, framework scalability",
+        "follow_up": "How would you implement the Factory Pattern for WebDriver initialization?",
+        "explanation": "Factory Pattern is ideal for creating different browser driver instances based on runtime configuration.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In a Data-Driven framework, you are reading test data from an Excel file. Which Java library is commonly used to read Excel files in Selenium automation?",
+        "options": [
+          "ExcelReader",
+          "JExcel",
+          "Apache POI",
+          "DataProvider"
+        ],
+        "answer_index": 2,
+        "skill": "Data-Driven Framework",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Data-Driven framework development is explicitly mentioned in the JD as a required automation framework type.",
+        "discussion_points": "Data-driven testing, external data sources, Apache POI API, test parameterization",
+        "follow_up": "How would you handle multiple sheets in an Excel workbook for different test scenarios?",
+        "explanation": "Apache POI is the standard Java library for reading and writing Excel files in automation.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "You need to integrate your Selenium test suite with Jenkins for CI/CD. Which Jenkins plugin is specifically designed to execute Maven projects?",
+        "options": [
+          "Maven Integration Plugin",
+          "Git Plugin",
+          "TestNG Plugin",
+          "Selenium Plugin"
+        ],
+        "answer_index": 0,
+        "skill": "CI/CD Integration",
+        "domain": "DevOps",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "CI/CD integration with Jenkins is a key responsibility in the JD for automating test execution pipelines.",
+        "discussion_points": "Jenkins configuration, Maven build automation, CI/CD pipelines, test execution scheduling",
+        "follow_up": "How would you configure Jenkins to trigger tests automatically on every Git commit?",
+        "explanation": "Maven Integration Plugin enables Jenkins to build and execute Maven-based projects including test suites.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "Your test script fails with 'StaleElementReferenceException' after the page dynamically updates. What is the most appropriate solution?",
+        "options": [
+          "Increase implicit wait time to 30 seconds",
+          "Re-locate the element after the page update before interacting with it",
+          "Use Thread.sleep() before clicking the element",
+          "Refresh the entire page and start over"
+        ],
+        "answer_index": 1,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Debugging & Troubleshooting",
+        "experience_level": "0-3 Years",
+        "reason": "Debugging common Selenium exceptions is essential for maintaining robust automation scripts as per JD requirements.",
+        "discussion_points": "StaleElementReferenceException, DOM updates, element re-location strategies, exception handling",
+        "follow_up": "How would you implement a retry mechanism for stale element scenarios?",
+        "explanation": "Re-locating the element after DOM changes ensures a fresh reference, resolving StaleElementReferenceException effectively.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "During a sprint, the Product Owner requests adding 15 new test scenarios, but only 3 days remain. As a Senior Test Automation Engineer, what is your best approach?",
+        "options": [
+          "Accept all 15 scenarios and work overtime to complete them",
+          "Prioritize scenarios based on business impact and risk, automate critical ones first, and discuss capacity with the team",
+          "Reject the request entirely and stick to the original plan",
+          "Automate all scenarios quickly without proper framework integration"
+        ],
+        "answer_index": 1,
+        "skill": "Agile Collaboration",
+        "domain": "Soft Skills",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Agile collaboration and sprint planning are explicitly mentioned in the JD as key responsibilities for the role.",
+        "discussion_points": "Agile ceremonies, prioritization, stakeholder communication, capacity planning, risk-based testing",
+        "follow_up": "How would you communicate the trade-offs to the Product Owner and the team?",
+        "explanation": "Prioritizing based on risk and collaborating with the team aligns with Agile principles and JD expectations.",
+        "source_doc": "Job Description",
+        "section": "A"
+      },
+      {
+        "question": "In Git, which command would you use to create a new branch named 'feature-automation' and switch to it immediately?",
+        "options": [
+          "git branch feature-automation && git checkout feature-automation",
+          "git checkout -b feature-automation",
+          "git create feature-automation",
+          "git switch --new feature-automation"
+        ],
+        "answer_index": 1,
+        "skill": "Git Version Control",
+        "domain": "DevOps",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Git is explicitly required in the JD for source control management in collaborative automation development.",
+        "discussion_points": "Git branching strategies, version control workflows, collaboration in teams",
+        "follow_up": "How would you merge your feature branch back into the main branch after code review?",
+        "explanation": "git checkout -b creates a new branch and switches to it in one command, standard practice.",
+        "source_doc": "Job Description",
+        "section": "A"
+      }
+    ],
+    "section_b": [
+      {
+        "question": "Your resume mentions you developed a Selenium automation framework using Java, TestNG, and Maven. In TestNG, which annotation would you use to execute a method once before all test methods in a test class?",
+        "options": [
+          "@BeforeClass",
+          "@BeforeTest",
+          "@BeforeMethod",
+          "@BeforeSuite"
+        ],
+        "answer_index": 0,
+        "skill": "TestNG",
+        "domain": "Testing",
+        "question_type": "Technical Concept",
+        "experience_level": "0-3 Years",
+        "reason": "Tests understanding of TestNG lifecycle annotations critical for framework design",
+        "discussion_points": "TestNG annotations hierarchy, test execution order, setup and teardown methods",
+        "follow_up": "How would you handle test data initialization that needs to run once for the entire test suite?",
+        "explanation": "@BeforeClass runs once before all test methods in the current class",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you implemented Page Object Model (POM) framework. Given this LoginPage class snippet:\n```java\npublic class LoginPage {\n    WebDriver driver;\n    @FindBy(id=\"username\")\n    WebElement usernameField;\n    \n    public LoginPage(WebDriver driver) {\n        this.driver = driver;\n        // What is missing here?\n    }\n}\n```\nWhat is the missing critical step in the constructor?",
+        "options": [
+          "driver.get(\"url\")",
+          "driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)",
+          "new WebDriverWait(driver, 10)",
+          "PageFactory.initElements(driver, this)"
+        ],
+        "answer_index": 3,
+        "skill": "Selenium WebDriver",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Validates practical knowledge of POM implementation and PageFactory initialization",
+        "discussion_points": "PageFactory usage, @FindBy annotations, lazy initialization, element location strategies",
+        "follow_up": "What are the advantages of using PageFactory over traditional driver.findElement() approach?",
+        "explanation": "PageFactory.initElements initializes @FindBy annotated WebElements in POM",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured method chain correctly validates that a GET request to '/users/123' returns status code 200 and contains a field 'name' with value 'John'?",
+        "options": [
+          "given().when().get(\"/users/123\").then().statusCode(200).body(\"name\", equalTo(\"John\"))",
+          "RestAssured.get(\"/users/123\").then().assertThat().statusCode(200).and().body(\"name\").equals(\"John\")",
+          "given().get(\"/users/123\").expect().statusCode(200).body(\"name\", is(\"John\"))",
+          "when().get(\"/users/123\").then().status(200).body(\"name\").equalTo(\"John\")"
+        ],
+        "answer_index": 0,
+        "skill": "Rest Assured",
+        "domain": "Testing",
+        "question_type": "Practical Implementation",
+        "experience_level": "0-3 Years",
+        "reason": "Tests hands-on knowledge of Rest Assured syntax and API validation patterns",
+        "discussion_points": "BDD-style syntax, response validation, Hamcrest matchers, status code assertions",
+        "follow_up": "How would you extract and store a value from the JSON response for use in subsequent API calls?",
+        "explanation": "Correct Rest Assured BDD syntax: given().when().get().then().statusCode().body()",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, and each test takes 10 minutes sequentially, what is the minimum execution time achievable with optimal parallel configuration?",
+        "options": [
+          "20 minutes",
+          "10 minutes",
+          "30 minutes",
+          "50 minutes"
+        ],
+        "answer_index": 0,
+        "skill": "Jenkins",
+        "domain": "Testing",
+        "question_type": "Scenario-Based",
+        "experience_level": "0-3 Years",
+        "reason": "Evaluates understanding of parallel execution optimization and resource utilization in CI/CD",
+        "discussion_points": "TestNG parallel execution modes, Jenkins node configuration, thread-level vs class-level parallelism, execution optimization",
+        "follow_up": "What TestNG XML configuration would you use to achieve class-level parallel execution?",
+        "explanation": "3 nodes run 3 tests (10 min), then 2 remaining tests (10 min) = 20 minutes total",
+        "source_doc": "Resume",
+        "section": "B"
+      },
+      {
+        "question": "Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment and reduced regression testing effort from 5 days to 1 day. During a sprint, a critical production bug is found 2 days before release. The Product Owner wants to add a new feature, but the Developer suggests fixing the bug first. As the Senior Test Automation Engineer, what should be your recommended approach?",
+        "options": [
+          "Prioritize the new feature as requested by the Product Owner since they own the backlog",
+          "Recommend releasing as planned and fixing the bug in a hotfix after release",
+          "Suggest splitting the team to work on both simultaneously to meet all requirements",
+          "Support fixing the critical bug first, assess regression impact, and defer the feature to next sprint"
+        ],
+        "answer_index": 3,
+        "skill": "Agile Scrum",
+        "domain": "Soft Skills",
+        "question_type": "Leadership / Behavioral",
+        "experience_level": "0-3 Years",
+        "reason": "Assesses decision-making, stakeholder management, and quality advocacy in Agile context",
+        "discussion_points": "Risk assessment, sprint commitment, quality vs velocity, stakeholder communication, technical debt",
+        "follow_up": "How would you communicate this decision to the Product Owner and ensure alignment?",
+        "explanation": "Critical bugs threaten production stability; quality and risk mitigation take precedence",
+        "source_doc": "Resume",
+        "section": "B"
+      }
+    ],
+    "count_a": 10,
+    "count_b": 5,
+    "bob_command": "C:\\Users\\VivekGoyal\\AppData\\Roaming\\npm\\bob.cmd --accept-license --hide-intermediary-output -o json --chat-mode ask < [prompt_stdin]",
+    "bob_logs": "[system] Repositories: Programming Knowledge Repository.md, Testing Knowledge Repository.md, Cloud Technologies Knowledge Repository.md, Data Engineering Knowledge Repository.md, AI & Generative AI Knowledge Repository.md, DevOps Knowledge Repository.md, Soft Skills Knowledge Repository.md\n\n=== SECTION A (10 questions — JD-based) ===\n[bob exit code: 0]\n\n[\n  {\n    \"question\": \"In Selenium WebDriver with Java, which method is used to switch the driver's focus to a specific frame using its index?\",\n    \"options\": [\n      \"driver.switchTo().frame(int index)\",\n      \"driver.changeFrame(int index)\",\n      \"driver.selectFrame(int index)\",\n      \"driver.focusFrame(int index)\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Understanding frame switching is essential for automating web applications with iframes, a common requirement in functional testing.\",\n    \"discussion_points\": \"Frame handling, WebDriver API methods, switching contexts\",\n    \"follow_up\": \"How would you handle a scenario where the frame doesn't have an index but has a name or WebElement?\",\n    \"explanation\": \"switchTo().frame(int index) is the correct WebDriver API method for switching to frames by index.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You are designing a Page Object Model (POM) framework. Which annotation in TestNG would you use to execute a method before each test method in a test class?\",\n    \"options\": [\n      \"@BeforeSuite\",\n      \"@BeforeTest\",\n      \"@BeforeMethod\",\n      \"@BeforeClass\"\n    ],\n    \"answer_index\": 2,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"TestNG annotations are fundamental for structuring test execution flow in automation frameworks, directly mentioned in the JD.\",\n    \"discussion_points\": \"TestNG lifecycle annotations, test setup and teardown, framework design\",\n    \"follow_up\": \"What is the difference between @BeforeTest and @BeforeClass in TestNG?\",\n    \"explanation\": \"@BeforeMethod executes before each test method, ideal for test-level setup in POM frameworks.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"In Maven, which file contains project dependencies and build configuration?\",\n    \"options\": [\n      \"build.gradle\",\n      \"settings.xml\",\n      \"pom.xml\",\n      \"dependencies.config\"\n    ],\n    \"answer_index\": 2,\n    \"skill\": \"Maven\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Maven is explicitly required in the JD for managing build tools and dependencies in automation projects.\",\n    \"discussion_points\": \"Maven project structure, dependency management, build lifecycle\",\n    \"follow_up\": \"How do you add a Selenium WebDriver dependency in pom.xml?\",\n    \"explanation\": \"pom.xml (Project Object Model) is Maven's core configuration file for dependencies and build settings.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Which Rest Assured method is used to send a GET request to an API endpoint and validate the response status code is 200?\\n\\n```java\\ngiven().\\n    baseUri(\\\"https://api.example.com\\\").\\nwhen().\\n    get(\\\"/users\\\").\\nthen().\\n    ______;\\n```\",\n    \"options\": [\n      \"assertThat().statusCode(200)\",\n      \"statusCode(200)\",\n      \"validateStatus(200)\",\n      \"checkStatusCode(200)\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Rest Assured API Testing\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"API automation using Rest Assured is a key responsibility mentioned in the JD for validating web services.\",\n    \"discussion_points\": \"Rest Assured syntax, API testing, response validation, BDD style\",\n    \"follow_up\": \"How would you extract and validate a specific JSON field from the response body?\",\n    \"explanation\": \"statusCode(200) is the correct Rest Assured method for validating HTTP response status codes.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Your automation suite needs to run tests on Chrome, Firefox, and Edge browsers. Which design pattern would you implement to initialize different browser drivers efficiently?\",\n    \"options\": [\n      \"Singleton Pattern\",\n      \"Factory Pattern\",\n      \"Observer Pattern\",\n      \"Builder Pattern\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Automation Framework Development\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Framework development with cross-browser support is a core responsibility in the JD requiring design pattern knowledge.\",\n    \"discussion_points\": \"Design patterns in test automation, browser driver management, framework scalability\",\n    \"follow_up\": \"How would you implement the Factory Pattern for WebDriver initialization?\",\n    \"explanation\": \"Factory Pattern is ideal for creating different browser driver instances based on runtime configuration.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"In a Data-Driven framework, you are reading test data from an Excel file. Which Java library is commonly used to read Excel files in Selenium automation?\",\n    \"options\": [\n      \"Apache POI\",\n      \"JExcel\",\n      \"ExcelReader\",\n      \"DataProvider\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Data-Driven Framework\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Data-Driven framework development is explicitly mentioned in the JD as a required automation framework type.\",\n    \"discussion_points\": \"Data-driven testing, external data sources, Apache POI API, test parameterization\",\n    \"follow_up\": \"How would you handle multiple sheets in an Excel workbook for different test scenarios?\",\n    \"explanation\": \"Apache POI is the standard Java library for reading and writing Excel files in automation.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"You need to integrate your Selenium test suite with Jenkins for CI/CD. Which Jenkins plugin is specifically designed to execute Maven projects?\",\n    \"options\": [\n      \"Git Plugin\",\n      \"Maven Integration Plugin\",\n      \"TestNG Plugin\",\n      \"Selenium Plugin\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"CI/CD Integration\",\n    \"domain\": \"DevOps\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"CI/CD integration with Jenkins is a key responsibility in the JD for automating test execution pipelines.\",\n    \"discussion_points\": \"Jenkins configuration, Maven build automation, CI/CD pipelines, test execution scheduling\",\n    \"follow_up\": \"How would you configure Jenkins to trigger tests automatically on every Git commit?\",\n    \"explanation\": \"Maven Integration Plugin enables Jenkins to build and execute Maven-based projects including test suites.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"Your test script fails with 'StaleElementReferenceException' after the page dynamically updates. What is the most appropriate solution?\",\n    \"options\": [\n      \"Increase implicit wait time to 30 seconds\",\n      \"Re-locate the element after the page update before interacting with it\",\n      \"Use Thread.sleep() before clicking the element\",\n      \"Refresh the entire page and start over\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Debugging & Troubleshooting\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Debugging common Selenium exceptions is essential for maintaining robust automation scripts as per JD requirements.\",\n    \"discussion_points\": \"StaleElementReferenceException, DOM updates, element re-location strategies, exception handling\",\n    \"follow_up\": \"How would you implement a retry mechanism for stale element scenarios?\",\n    \"explanation\": \"Re-locating the element after DOM changes ensures a fresh reference, resolving StaleElementReferenceException effectively.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"During a sprint, the Product Owner requests adding 15 new test scenarios, but only 3 days remain. As a Senior Test Automation Engineer, what is your best approach?\",\n    \"options\": [\n      \"Accept all 15 scenarios and work overtime to complete them\",\n      \"Reject the request entirely and stick to the original plan\",\n      \"Prioritize scenarios based on business impact and risk, automate critical ones first, and discuss capacity with the team\",\n      \"Automate all scenarios quickly without proper framework integration\"\n    ],\n    \"answer_index\": 2,\n    \"skill\": \"Agile Collaboration\",\n    \"domain\": \"Soft Skills\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Agile collaboration and sprint planning are explicitly mentioned in the JD as key responsibilities for the role.\",\n    \"discussion_points\": \"Agile ceremonies, prioritization, stakeholder communication, capacity planning, risk-based testing\",\n    \"follow_up\": \"How would you communicate the trade-offs to the Product Owner and the team?\",\n    \"explanation\": \"Prioritizing based on risk and collaborating with the team aligns with Agile principles and JD expectations.\",\n    \"source_doc\": \"Job Description\"\n  },\n  {\n    \"question\": \"In Git, which command would you use to create a new branch named 'feature-automation' and switch to it immediately?\",\n    \"options\": [\n      \"git branch feature-automation && git checkout feature-automation\",\n      \"git checkout -b feature-automation\",\n      \"git create feature-automation\",\n      \"git switch --new feature-automation\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Git Version Control\",\n    \"domain\": \"DevOps\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Git is explicitly required in the JD for source control management in collaborative automation development.\",\n    \"discussion_points\": \"Git branching strategies, version control workflows, collaboration in teams\",\n    \"follow_up\": \"How would you merge your feature branch back into the main branch after code review?\",\n    \"explanation\": \"git checkout -b creates a new branch and switches to it in one command, standard practice.\",\n    \"source_doc\": \"Job Description\"\n  }\n]\n{\n  \"response\": \"\",\n  \"stats\": {\n    \"models\": {\n      \"premium\": {\n        \"api\": {\n          \"totalRequests\": 2,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 59022\n        },\n        \"tokens\": {\n          \"prompt\": 34505,\n          \"candidates\": 5274,\n          \"total\": 39779,\n          \"cached\": 15899,\n          \"thoughts\": 0,\n          \"tool\": 0\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 1,\n      \"totalSuccess\": 1,\n      \"totalFail\": 0,\n      \"totalDurationMs\": 4,\n      \"totalDecisions\": {\n        \"accept\": 0,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 1\n      },\n      \"byName\": {\n        \"attempt_completion\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 4,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 1\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    },\n    \"budgetSpend\": 54.6,\n    \"maxBudget\": 100,\n    \"sessionCost\": 0.09944700000000001\n  }\n}\n\n\n=== SECTION B (5 questions — Resume-based) ===\n[bob exit code: 0]\n\n[\n  {\n    \"question\": \"Your resume mentions you developed a Selenium automation framework using Java, TestNG, and Maven. In TestNG, which annotation would you use to execute a method once before all test methods in a test class?\",\n    \"options\": [\n      \"@BeforeClass\",\n      \"@BeforeTest\",\n      \"@BeforeMethod\",\n      \"@BeforeSuite\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"TestNG\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Technical Concept\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Tests understanding of TestNG lifecycle annotations critical for framework design\",\n    \"discussion_points\": \"TestNG annotations hierarchy, test execution order, setup and teardown methods\",\n    \"follow_up\": \"How would you handle test data initialization that needs to run once for the entire test suite?\",\n    \"explanation\": \"@BeforeClass runs once before all test methods in the current class\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume states you implemented Page Object Model (POM) framework. Given this LoginPage class snippet:\\n```java\\npublic class LoginPage {\\n    WebDriver driver;\\n    @FindBy(id=\\\"username\\\")\\n    WebElement usernameField;\\n    \\n    public LoginPage(WebDriver driver) {\\n        this.driver = driver;\\n        // What is missing here?\\n    }\\n}\\n```\\nWhat is the missing critical step in the constructor?\",\n    \"options\": [\n      \"driver.get(\\\"url\\\")\",\n      \"PageFactory.initElements(driver, this)\",\n      \"new WebDriverWait(driver, 10)\",\n      \"driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Selenium WebDriver\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Validates practical knowledge of POM implementation and PageFactory initialization\",\n    \"discussion_points\": \"PageFactory usage, @FindBy annotations, lazy initialization, element location strategies\",\n    \"follow_up\": \"What are the advantages of using PageFactory over traditional driver.findElement() approach?\",\n    \"explanation\": \"PageFactory.initElements initializes @FindBy annotated WebElements in POM\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume mentions you developed API automation scripts using Rest Assured. Which Rest Assured method chain correctly validates that a GET request to '/users/123' returns status code 200 and contains a field 'name' with value 'John'?\",\n    \"options\": [\n      \"given().when().get(\\\"/users/123\\\").then().statusCode(200).body(\\\"name\\\", equalTo(\\\"John\\\"))\",\n      \"RestAssured.get(\\\"/users/123\\\").then().assertThat().statusCode(200).and().body(\\\"name\\\").equals(\\\"John\\\")\",\n      \"given().get(\\\"/users/123\\\").expect().statusCode(200).body(\\\"name\\\", is(\\\"John\\\"))\",\n      \"when().get(\\\"/users/123\\\").then().status(200).body(\\\"name\\\").equalTo(\\\"John\\\")\"\n    ],\n    \"answer_index\": 0,\n    \"skill\": \"Rest Assured\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Practical Implementation\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Tests hands-on knowledge of Rest Assured syntax and API validation patterns\",\n    \"discussion_points\": \"BDD-style syntax, response validation, Hamcrest matchers, status code assertions\",\n    \"follow_up\": \"How would you extract and store a value from the JSON response for use in subsequent API calls?\",\n    \"explanation\": \"Correct Rest Assured BDD syntax: given().when().get().then().statusCode().body()\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume states you integrated automation suite with Jenkins CI/CD pipeline and implemented parallel execution using TestNG. In a scenario where 5 test classes need to run in parallel on Jenkins with 3 available nodes, and each test takes 10 minutes sequentially, what is the minimum execution time achievable with optimal parallel configuration?\",\n    \"options\": [\n      \"10 minutes\",\n      \"20 minutes\",\n      \"30 minutes\",\n      \"50 minutes\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Jenkins\",\n    \"domain\": \"Testing\",\n    \"question_type\": \"Scenario-Based\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Evaluates understanding of parallel execution optimization and resource utilization in CI/CD\",\n    \"discussion_points\": \"TestNG parallel execution modes, Jenkins node configuration, thread-level vs class-level parallelism, execution optimization\",\n    \"follow_up\": \"What TestNG XML configuration would you use to achieve class-level parallel execution?\",\n    \"explanation\": \"3 nodes run 3 tests (10 min), then 2 remaining tests (10 min) = 20 minutes total\",\n    \"source_doc\": \"Resume\"\n  },\n  {\n    \"question\": \"Your resume mentions you worked closely with Developers, Product Owners, and Business Analysts in an Agile environment and reduced regression testing effort from 5 days to 1 day. During a sprint, a critical production bug is found 2 days before release. The Product Owner wants to add a new feature, but the Developer suggests fixing the bug first. As the Senior Test Automation Engineer, what should be your recommended approach?\",\n    \"options\": [\n      \"Prioritize the new feature as requested by the Product Owner since they own the backlog\",\n      \"Support fixing the critical bug first, assess regression impact, and defer the feature to next sprint\",\n      \"Suggest splitting the team to work on both simultaneously to meet all requirements\",\n      \"Recommend releasing as planned and fixing the bug in a hotfix after release\"\n    ],\n    \"answer_index\": 1,\n    \"skill\": \"Agile Scrum\",\n    \"domain\": \"Soft Skills\",\n    \"question_type\": \"Leadership / Behavioral\",\n    \"experience_level\": \"0-3 Years\",\n    \"reason\": \"Assesses decision-making, stakeholder management, and quality advocacy in Agile context\",\n    \"discussion_points\": \"Risk assessment, sprint commitment, quality vs velocity, stakeholder communication, technical debt\",\n    \"follow_up\": \"How would you communicate this decision to the Product Owner and ensure alignment?\",\n    \"explanation\": \"Critical bugs threaten production stability; quality and risk mitigation take precedence\",\n    \"source_doc\": \"Resume\"\n  }\n]\n{\n  \"response\": \"\",\n  \"stats\": {\n    \"models\": {\n      \"premium\": {\n        \"api\": {\n          \"totalRequests\": 2,\n          \"totalErrors\": 0,\n          \"totalLatencyMs\": 40586\n        },\n        \"tokens\": {\n          \"prompt\": 34012,\n          \"candidates\": 3315,\n          \"total\": 37327,\n          \"cached\": 29791,\n          \"thoughts\": 0,\n          \"tool\": 0\n        }\n      }\n    },\n    \"tools\": {\n      \"totalCalls\": 1,\n      \"totalSuccess\": 1,\n      \"totalFail\": 0,\n      \"totalDurationMs\": 2,\n      \"totalDecisions\": {\n        \"accept\": 0,\n        \"reject\": 0,\n        \"modify\": 0,\n        \"auto_accept\": 1\n      },\n      \"byName\": {\n        \"attempt_completion\": {\n          \"count\": 1,\n          \"success\": 1,\n          \"fail\": 0,\n          \"durationMs\": 2,\n          \"decisions\": {\n            \"accept\": 0,\n            \"reject\": 0,\n            \"modify\": 0,\n            \"auto_accept\": 1\n          }\n        }\n      }\n    },\n    \"files\": {\n      \"totalLinesAdded\": 0,\n      \"totalLinesRemoved\": 0\n    },\n    \"budgetSpend\": 54.7,\n    \"maxBudget\": 100,\n    \"sessionCost\": 0.093317\n  }\n}\n",
+    "created_at": "2026-07-17T13:38:53.586612",
+    "submitted": true,
+    "candidate_dob": "1999-01-01",
+    "candidate_experience": "5",
+    "terminated": false
+  }
+}

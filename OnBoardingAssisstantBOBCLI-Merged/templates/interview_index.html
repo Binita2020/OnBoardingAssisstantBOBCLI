@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM BOB — Interview Assessment Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/interview/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .app-header {
+            background-color: #ffffff !important;
+            border-bottom: 2px solid #2563eb !important;
+            box-shadow: none !important;
+            height: auto !important;
+            padding: 1rem 0 !important;
+            margin-bottom: 2rem !important;
+            position: static !important;
+        }
+        .ibm-logo-card {
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.05);
+            flex-shrink: 0;
+        }
+        .ibm-logo-img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text h1 {
+            color: #0f172a !important;
+        }
+        .logo-text .subtext {
+            color: #475569 !important;
+        }
+        .bob-badge {
+            background-color: #2563eb !important;
+            color: #ffffff !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+        }
+        .bob-badge-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 4px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            padding: 1px;
+        }
+        .loader-icon-img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            border-radius: 12px;
+            display: block;
+            z-index: 5;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo-area">
+            <div class="ibm-logo-card">
+                <img src="/static/onboarding/ibm-logo.png" alt="IBM Logo" class="ibm-logo-img" />
+            </div>
+            <div class="logo-text">
+                <h1>IBM Interview Assessment Portal</h1>
+                <span class="subtext">Interviewer Dashboard &mdash; Resume-Aware &amp; JD-Driven</span>
+            </div>
+        </div>
+        <div class="bob-badge">
+            <img src="/static/bob-logo.png" alt="BOB Logo" class="bob-badge-icon" />
+            <span>Powered by IBM BOB CLI</span>
+        </div>
+    </header>
+
+    <main class="app-main">
+
+        <!-- ══ STATE 1: INTERVIEWER SETUP FORM ══ -->
+        <section id="setup-screen" class="state-panel active">
+            <div class="panel-hero">
+                <h2>Create Candidate Assessment</h2>
+                <p>Upload the candidate's resume and the job description. IBM BOB CLI will generate a personalised, experience-based quiz. A shareable link will be created for the candidate.</p>
+            </div>
+
+            <div class="setup-grid-3col">
+
+                <!-- Col 1: Interviewer Details -->
+                <div class="setup-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-user-tie icon-blue"></i>
+                        <h3>Interviewer Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <label class="input-label" for="interviewer-name">Full Name</label>
+                        <input class="form-input" type="text" id="interviewer-name" placeholder="e.g. Priya Sharma" />
+
+                        <label class="input-label" for="interviewer-email">IBM Email ID</label>
+                        <input class="form-input" type="email" id="interviewer-email" placeholder="priya.sharma@ibm.com" />
+
+                        <label class="input-label" for="candidate-name">Candidate Full Name</label>
+                        <input class="form-input" type="text" id="candidate-name" placeholder="e.g. Ravi Kumar" />
+
+                        <label class="input-label" for="candidate-email">Candidate Email ID</label>
+                        <input class="form-input" type="email" id="candidate-email" placeholder="ravi.kumar@email.com" />
+                    </div>
+                </div>
+
+                <!-- Col 2: Document Uploads -->
+                <div class="setup-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-file-arrow-up icon-purple"></i>
+                        <h3>Upload Documents</h3>
+                    </div>
+                    <div class="card-body">
+                        <label class="input-label">Candidate Resume</label>
+                        <div class="file-drop-zone" id="resume-drop" onclick="document.getElementById('resume-file').click()">
+                            <i class="fa-solid fa-file-user drop-icon"></i>
+                            <span class="drop-text" id="resume-label">Click to upload resume (PDF, DOCX, TXT)</span>
+                            <input type="file" id="resume-file" accept=".pdf,.docx,.txt,.md" style="display:none" onchange="handleFileSelect('resume')">
+                        </div>
+
+                        <label class="input-label" style="margin-top:1.25rem;">Job Description</label>
+                        <div class="file-drop-zone" id="jd-drop" onclick="document.getElementById('jd-file').click()">
+                            <i class="fa-solid fa-file-lines drop-icon"></i>
+                            <span class="drop-text" id="jd-label">Click to upload JD (PDF, DOCX, TXT)</span>
+                            <input type="file" id="jd-file" accept=".pdf,.docx,.txt,.md" style="display:none" onchange="handleFileSelect('jd')">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Quiz Config -->
+                <div class="setup-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-sliders icon-green"></i>
+                        <h3>Quiz Configuration</h3>
+                    </div>
+                    <div class="card-body">
+                        <label class="input-label">Number of Technical/JD Questions</label>
+                        <div class="q-count-options">
+                            <div class="q-count-box" data-count="5" onclick="selectQuestionCount(5)">5</div>
+                            <div class="q-count-box active" data-count="10" onclick="selectQuestionCount(10)">10</div>
+                            <div class="q-count-box" data-count="15" onclick="selectQuestionCount(15)">15</div>
+                        </div>
+
+                        <label class="input-label" style="margin-top:1.25rem;">Number of Behaviour/Resume Questions</label>
+                        <div class="behaviour-count-options">
+                            <div class="behaviour-count-box active" data-count="0" onclick="selectBehaviourCount(0)">0</div>
+                            <div class="behaviour-count-box" data-count="5" onclick="selectBehaviourCount(5)">5</div>
+                            <div class="behaviour-count-box" data-count="10" onclick="selectBehaviourCount(10)">10</div>
+                        </div>
+
+                        <label class="input-label" style="margin-top:1.25rem;">Difficulty Level</label>
+                        <div class="difficulty-options">
+                            <div class="difficulty-box easy" data-level="easy" onclick="selectDifficulty('easy')">
+                                <div class="diff-header"><span class="diff-title">Easy</span><i class="fa-solid fa-circle-check check-icon"></i></div>
+                                <p class="diff-desc">Fact-based questions directly from the resume.</p>
+                            </div>
+                            <div class="difficulty-box medium active" data-level="medium" onclick="selectDifficulty('medium')">
+                                <div class="diff-header"><span class="diff-title">Medium</span><i class="fa-solid fa-circle-check check-icon"></i></div>
+                                <p class="diff-desc">Applied questions testing resume-to-JD fit.</p>
+                            </div>
+                            <div class="difficulty-box hard" data-level="hard" onclick="selectDifficulty('hard')">
+                                <div class="diff-header"><span class="diff-title">Hard</span><i class="fa-solid fa-circle-check check-icon"></i></div>
+                                <p class="diff-desc">Scenario-based edge cases from resume vs. JD.</p>
+                            </div>
+                        </div>
+
+                        <div id="form-error" class="form-error-box" style="display:none;"></div>
+
+                        <button id="btn-create-assessment" class="btn btn-primary btn-block" style="margin-top:1.5rem;" onclick="createAssessment()">
+                            <i class="fa-solid fa-wand-magic-sparkles btn-icon"></i> Generate Assessment Link
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══ STATE 2: GENERATING / TERMINAL ══ -->
+        <section id="loading-screen" class="state-panel">
+            <div class="loading-container">
+                <div class="glass-loader">
+                    <div class="loader-waves"></div>
+                    <img src="/static/bob-logo.png" alt="BOB Logo" class="loader-icon-img pulse" />
+                </div>
+                <h2>IBM BOB is Generating Questions</h2>
+                <p id="loading-status">Parsing resume and job description...</p>
+
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">IBM BOB Execution Console</span>
+                        <span class="terminal-action">bob.cmd</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="prompt">$</span> <span id="terminal-command">bob --hide-intermediary-output --output-format json --chat-mode ask &lt; [prompt_stdin]</span></div>
+                        <pre id="terminal-output">Initializing model session...</pre>
+                    </div>
+                </div>
+
+                <div class="loading-tip">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>BOB is reading the resume and JD, then crafting personalised questions. This takes ~15–30 seconds.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STATE 3: LINK GENERATED ══ -->
+        <section id="link-screen" class="state-panel">
+            <div class="link-generated-container">
+                <div class="link-success-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Assessment Link Generated!</h2>
+                <p class="link-subtitle">Share this unique link with <strong id="link-candidate-name">the candidate</strong>. The link is personalised and single-use.</p>
+
+                <div class="link-box-container">
+                    <div class="link-box">
+                        <span id="assessment-link-text" class="link-text">Loading...</span>
+                        <button class="btn btn-secondary btn-copy" onclick="copyAssessmentLink()" title="Copy link">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                    <div id="copy-confirm" class="copy-confirm" style="display:none;"><i class="fa-solid fa-check"></i> Copied!</div>
+                </div>
+
+                <div class="link-meta-grid">
+                    <div class="link-meta-item">
+                        <span class="meta-label">Candidate</span>
+                        <span class="meta-value" id="lm-candidate">—</span>
+                    </div>
+                    <div class="link-meta-item">
+                        <span class="meta-label">Questions</span>
+                        <span class="meta-value" id="lm-qcount">—</span>
+                    </div>
+                    <div class="link-meta-item">
+                        <span class="meta-label">Difficulty</span>
+                        <span class="meta-value" id="lm-difficulty">—</span>
+                    </div>
+                    <div class="link-meta-item">
+                        <span class="meta-label">Status</span>
+                        <span class="meta-value status-pending" id="lm-status">Pending</span>
+                    </div>
+                </div>
+
+                <!-- Repositories Used -->
+                <div id="repos-used-block" style="display:none; width:100%; margin-top:0.25rem; margin-bottom:0.5rem;">
+                    <div class="repos-used-label"><i class="fa-solid fa-book-open"></i> Knowledge Repositories Used</div>
+                    <div id="repos-used-list" class="repos-used-list"></div>
+                </div>
+
+                <!-- BOB Terminal Logs -->
+                <div class="terminal-window" style="margin-top:2rem;">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">BOB Execution Log</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="prompt">$</span> <span id="link-terminal-command"></span></div>
+                        <pre id="link-terminal-output"></pre>
+                    </div>
+                </div>
+
+                <div class="link-actions">
+                    <button class="btn btn-secondary" onclick="downloadResults()">
+                        <i class="fa-solid fa-file-excel btn-icon"></i> Download Results Excel
+                    </button>
+                    <button class="btn btn-primary" onclick="createAnother()">
+                        <i class="fa-solid fa-plus btn-icon"></i> Create Another Assessment
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>IBM Interview Assessment Portal &copy; 2026. Built with Python, FastAPI, and IBM BOB CLI.</p>
+    </footer>
+</div>
+
+<script src="/static/interview/app.js"></script>
+</body>
+</html>
