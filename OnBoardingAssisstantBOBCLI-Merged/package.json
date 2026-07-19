@@ -22,3 +22,14 @@
   },
   "homepage": "https://github.com/Binita2020/OnBoardingAssisstantBOBCLI#readme"
 }
+{
+  "name": "bob-cli",
+  "version": "1.0.6",
+  "main": "index.js",
+  "bin": {
+    "bob": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
