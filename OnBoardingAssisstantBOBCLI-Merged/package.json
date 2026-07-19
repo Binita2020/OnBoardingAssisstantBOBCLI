@@ -1,12 +1,13 @@
 {
-  "name": "onboardingassisstantbobcli",
-  "lockfileVersion": 3,
-  "requires": true,
-  "packages": {},
-  "version": "1.0.0",
-  "description": "",
+  "name": "bob-cli",
+  "version": "1.0.6",
+  "description": "Onboarding Assistant BOB CLI",
   "main": "index.js",
+  "bin": {
+    "bob": "./index.js"
+  },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,22 +15,10 @@
     "url": "git+https://github.com/Binita2020/OnBoardingAssisstantBOBCLI.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Binita",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Binita2020/OnBoardingAssisstantBOBCLI/issues"
   },
   "homepage": "https://github.com/Binita2020/OnBoardingAssisstantBOBCLI#readme"
-}
-{
-  "name": "bob-cli",
-  "version": "1.0.6",
-  "main": "index.js",
-  "bin": {
-    "bob": "./index.js"
-  },
-  "scripts": {
-    "start": "node index.js"
-  }
 }
