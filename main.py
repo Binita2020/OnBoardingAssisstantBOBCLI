@@ -51,6 +51,29 @@ async def add_no_cache_headers(request: Request, call_next):
 # }
 _sessions: dict[str, dict] = {}
 
+SESSIONS_FILE = Path("./results/sessions_db.json")
+
+def load_sessions():
+    global _sessions
+    if SESSIONS_FILE.exists():
+        try:
+            with open(SESSIONS_FILE, "r", encoding="utf-8") as f:
+                _sessions.update(json.load(f))
+                print(f"[INFO] Loaded {len(_sessions)} sessions from {SESSIONS_FILE}")
+        except Exception as e:
+            print(f"[WARN] Failed to load sessions from file: {e}")
+
+def save_sessions():
+    try:
+        SESSIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(SESSIONS_FILE, "w", encoding="utf-8") as f:
+            json.dump(_sessions, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[WARN] Failed to save sessions to file: {e}")
+
+# Load sessions on startup
+load_sessions()
+
 class QuizRequest(BaseModel):
     difficulty: str = "medium"
 
@@ -217,6 +240,7 @@ async def create_interview_session(
         "created_at":        datetime.datetime.utcnow().isoformat(),
         "submitted":         False,
     }
+    save_sessions()
 
     return {
         "token":              token,
@@ -327,6 +351,7 @@ async def submit_assessment(token: str, request: Request):
     body = await request.json()
     answers: dict = body.get("answers", {})
     terminated: bool = body.get("terminated", False)
+    video_status: str = body.get("video_status", "N/A")
 
     questions = session["questions"]
     total = len(questions)
@@ -391,14 +416,58 @@ async def submit_assessment(token: str, request: Request):
             candidate_dob=session.get("candidate_dob", ""),
             candidate_experience=session.get("candidate_experience", ""),
             status=status,
+            video_status=video_status,
         )
     except Exception as e:
         print(f"[WARN] Failed to save results to Excel: {e}")
 
     # Mark session as submitted
     _sessions[token]["submitted"] = True
+    _sessions[token]["terminated"] = terminated
+    save_sessions()
 
     return {"submitted": True, "message": "Thank you for completing the assessment. We will get back to you soon."}
+
+@app.post("/api/assessment/{token}/upload_video")
+async def upload_video(token: str, video: UploadFile = File(...)):
+    """
+    Upload webcam video recording for candidate assessment.
+    """
+    session = _sessions.get(token)
+    if not session:
+        raise HTTPException(status_code=404, detail="Invalid or expired assessment link.")
+    
+    candidate_name = "".join(c if c.isalnum() or c in "._-" else "_" for c in session.get("candidate_name", "candidate"))
+    
+    # Ensure results/videos directory exists
+    video_dir = Path("./results/videos")
+    video_dir.mkdir(parents=True, exist_ok=True)
+    
+    file_path = video_dir / f"{token}_{candidate_name}.webm"
+    try:
+        content = await video.read()
+        with open(file_path, "wb") as f:
+            f.write(content)
+        return {"uploaded": True, "filename": file_path.name}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save video: {e}")
+
+@app.get("/api/assessment/{token}/status")
+async def get_assessment_status(token: str):
+    """
+    Check the current submission status of the assessment.
+    """
+    session = _sessions.get(token)
+    if not session:
+        raise HTTPException(status_code=404, detail="Invalid or expired assessment link.")
+    
+    if session.get("submitted", False):
+        if session.get("terminated", False):
+            return {"status": "Terminated"}
+        else:
+            return {"status": "Completed"}
+    else:
+        return {"status": "Pending"}
 
 # ── API: Interviewer downloads results ────────────────────────────────────────
 
@@ -419,6 +488,7 @@ async def download_results(interviewer_email: str):
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
+    host = os.environ.get("HOST", "0.0.0.0")
     port = int(os.environ.get("PORT", 8000))
-    print(f"Starting server on http://localhost:{port}")
-    uvicorn.run("main:app", host="127.0.0.1", port=port, reload=True)
+    print(f"Starting server on http://{host}:{port}")
+    uvicorn.run("main:app", host=host, port=port, reload=True)

@@ -285,7 +285,7 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 2rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+                <div id="instructions-text-details" style="margin-bottom: 2rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
                     <h3 style="font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Test Structure</h3>
                     <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
                         <li><strong>Section A (Job Description):</strong> Evaluates your technical alignment with the specified core skills and responsibilities of the role.</li>
@@ -296,16 +296,36 @@
                         <i class="fa-solid fa-circle-exclamation" style="margin-right: 0.25rem;"></i> Anti-Cheat &amp; Compliance Policy
                     </h3>
                     <p style="margin-bottom: 1rem;">
-                        This platform monitors tab activity and window focus to ensure a fair assessment. 
-                        <strong>Leaving the assessment screen, switching tabs, or losing window focus is strictly prohibited:</strong>
+                        This platform monitors tab activity, window focus, and utilizes your webcam to ensure a fair assessment:
                     </p>
                     <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li><strong style="color: #ea580c;">First Offence:</strong> A warning overlay will appear with a 10-second countdown. You must immediately click "I understand" to resume the test.</li>
-                        <li><strong style="color: #da1e28;">Second Offence:</strong> The assessment will be terminated immediately, and all answers collected up to that point will be submitted automatically. The status will be reported as <strong>Terminated – Tab Switch</strong> in your results file.</li>
+                        <li><strong style="color: #ea580c;">Webcam Monitoring:</strong> You must enable your camera. The test is recorded in full screen, and the video file is uploaded to our servers upon completion.</li>
+                        <li><strong style="color: #ea580c;">Fullscreen &amp; Tab-Switching:</strong> The test runs in forced full-screen mode. Exiting full-screen or switching tabs is strictly prohibited. The first offence triggers a warning, and the second offence terminates the assessment instantly.</li>
                     </ul>
                 </div>
 
-                <button class="btn-verify-v2" onclick="startAssessment()">
+                <!-- Camera Access Panel -->
+                <div class="camera-check-panel" style="margin-bottom: 2rem; padding: 1.5rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
+                    <h4 style="font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-video" style="color: #0f62fe;"></i> Webcam Compliance Verification
+                    </h4>
+                    <div style="display: flex; gap: 1.5rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                        <div class="camera-preview-box" style="width: 160px; height: 120px; background-color: #e2e8f0; border: 2px dashed #cbd5e1; border-radius: 6px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                            <video id="setup-camera-stream" autoplay muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: none;"></video>
+                            <span id="setup-camera-placeholder" style="font-size: 0.75rem; color: #64748b; font-weight: 500; padding: 0.5rem; line-height: 1.3; text-align: center;">Camera Offline</span>
+                        </div>
+                        <div style="text-align: left; max-width: 320px;">
+                            <p style="font-size: 0.88rem; color: #475569; margin-bottom: 0.5rem; line-height: 1.4;">
+                                This assessment requires a functional webcam. The system will record you for anti-cheat verification.
+                            </p>
+                            <div id="camera-status-msg" style="font-size: 0.84rem; font-weight: 600; color: #dc2626; display: flex; align-items: center; gap: 0.35rem;">
+                                <i class="fa-solid fa-circle-notch fa-spin"></i> Requesting camera access...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btn-start-test" class="btn-verify-v2" onclick="startAssessment()" disabled>
                     <i class="fa-solid fa-play"></i> I Agree, Start Assessment
                 </button>
             </div>
@@ -327,6 +347,9 @@
             <div class="quiz-progress-container">
                 <div class="progress-details">
                     <span id="quiz-progress-text">Question 1 of 10</span>
+                    <span id="quiz-timer-container" style="font-weight: 700; color: #da1e28; display: flex; align-items: center; gap: 0.35rem;">
+                        <i class="fa-regular fa-clock"></i> <span id="quiz-timer-text">10:00</span>
+                    </span>
                     <span id="quiz-difficulty-label" style="display:none;">Difficulty: Medium</span>
                 </div>
                 <div class="progress-bar-bg">
@@ -420,6 +443,14 @@
     <footer class="app-footer">
         <p>IBM Interview Assessment Portal &copy; 2026. Built with Python, FastAPI, and IBM BOB CLI.</p>
     </footer>
+</div>
+
+<!-- Floating Active Webcam Preview -->
+<div id="floating-camera-container" class="floating-camera-container">
+    <div class="floating-camera-header">
+        <i class="fa-solid fa-circle-dot recording-pulse"></i> REC
+    </div>
+    <video id="active-camera-stream" autoplay muted playsinline></video>
 </div>
 
 <!-- Anti-Cheat Warning Overlay (shown over quiz screen) -->

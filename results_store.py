@@ -40,6 +40,7 @@ SUMMARY_HEADERS = [
     "Sec B Score (%)",
     "Sec B Pass/Fail",
     "Status",
+    "Webcam Video",
 ]
 
 # ── Detail sheet headers ───────────────────────────────────────────────────────
@@ -174,7 +175,7 @@ def _write_summary_header(ws):
         7:  _HDR_OVERALL, 8:  _HDR_OVERALL, 9:  _HDR_OVERALL, 10: _HDR_OVERALL,
         11: _HDR_SEC_A,   12: _HDR_SEC_A,   13: _HDR_SEC_A,   14: _HDR_SEC_A,
         15: _HDR_SEC_B,   16: _HDR_SEC_B,   17: _HDR_SEC_B,   18: _HDR_SEC_B,
-        19: _HDR_OVERALL,
+        19: _HDR_OVERALL, 20: _HDR_OVERALL,
     }
     for col_idx, header in enumerate(SUMMARY_HEADERS, start=1):
         cell = ws.cell(row=1, column=col_idx, value=header)
@@ -232,6 +233,7 @@ def save_candidate_result(
     candidate_dob: str = "",
     candidate_experience: str = "",
     status: str = "Completed",
+    video_status: str = "N/A",
 ):
     """
     Append a candidate's result to the Excel workbook.
@@ -285,6 +287,7 @@ def save_candidate_result(
         score_b_val,
         pass_b_fail_str,
         status,
+        video_status,
     ]
     ws_summary.append(summary_row)
 
@@ -301,7 +304,7 @@ def save_candidate_result(
         cell_b.alignment = Alignment(horizontal="center")
 
     # Centre score/count columns
-    for col in (10, 11, 12, 13, 15, 16, 17, 19):
+    for col in (10, 11, 12, 13, 15, 16, 17, 19, 20):
         ws_summary.cell(row=last_row, column=col).alignment = Alignment(horizontal="center")
 
     # Section A score tint (col 13)

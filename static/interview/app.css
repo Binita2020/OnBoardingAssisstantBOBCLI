@@ -1355,6 +1355,14 @@ body::after {
     color: var(--accent-orange);
 }
 
+.status-completed {
+    color: var(--accent-green);
+}
+
+.status-terminated {
+    color: var(--ibm-red);
+}
+
 .link-actions {
     display: flex;
     gap: 1rem;
@@ -1752,6 +1760,60 @@ body::after {
     font-size: 1.3rem;  /* large red countdown number */
     font-weight: 700;
 }
+
+/* ── Floating Webcam Preview ─────────────────────────────────────────────── */
+.floating-camera-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 150px;
+    height: 112px;
+    border-radius: 8px;
+    border: 2px solid var(--ibm-blue);
+    background-color: var(--ibm-black);
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    display: none; /* Controlled by JS */
+    flex-direction: column;
+}
+
+.floating-camera-container.visible {
+    display: flex;
+}
+
+#active-camera-stream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-camera-header {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    z-index: 10;
+}
+
+.recording-pulse {
+    color: #cf222e;
+    animation: rec-blink 1.2s infinite;
+}
+
+@keyframes rec-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
 
 
 

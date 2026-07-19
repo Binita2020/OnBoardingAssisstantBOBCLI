@@ -1,0 +1,10 @@
+.venv/
+.git/
+__pycache__/
+*.py[cod]
+.env
+.bob/
+sessions/
+results/videos/
+results/*.xlsx
+results/*.json
