@@ -1,9 +1,9 @@
 {
   "name": "bob-cli",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "main": "index.js",
   "bin": {
-    "bob": "./bin/bob.js"
+    "bob": "./index.js"
   },
   "scripts": {
     "start": "node index.js"
