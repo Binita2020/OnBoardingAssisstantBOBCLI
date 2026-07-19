@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: onboarding-bob
+    env: node
+    buildCommand: |
+      pip install uv && uv sync
+      npm install
+      npm link
+    startCommand: python main.py
