@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM — Candidate Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/interview/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .verify-card-v2 {
+            max-width: 680px;
+            margin: 2.5rem auto;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        .verify-header-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            width: 100%;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .verify-header-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: #edf5ff;
+            border: 2px solid #a6c8ff;
+            color: #0f62fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(15, 98, 254, 0.1);
+        }
+        .verify-header-text {
+            flex-grow: 1;
+        }
+        .verify-header-text h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #061727;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.5px;
+        }
+        .verify-header-text p {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .verify-header-text p strong {
+            color: #2563eb;
+        }
+        .input-group-v2 {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .input-label-v2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2563eb;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .input-label-v2 i {
+            font-size: 0.9rem;
+        }
+        .form-input-v2 {
+            width: 100%;
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            color: #1e293b;
+            font-family: var(--font-sans), sans-serif;
+            font-size: 0.95rem;
+            padding: 0.8rem 1rem;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .form-input-v2:focus {
+            border-color: #2563eb;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+        .form-error-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background-color: #ffeef0;
+            border: 1px solid #ffb3b8;
+            border-radius: 6px;
+            color: #da1e28;
+            font-size: 0.88rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            line-height: 1.45;
+        }
+        .form-error-box .error-icon {
+            font-size: 1.15rem;
+            color: #da1e28;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+        .btn-verify-v2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.9rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .btn-verify-v2:hover:not(:disabled) {
+            background-color: #1d4ed8;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+        .btn-verify-v2:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .app-header {
+            background-color: #ffffff !important;
+            border-bottom: 2px solid #2563eb !important;
+            box-shadow: none !important;
+            height: auto !important;
+            padding: 1rem 0 !important;
+            margin-bottom: 2rem !important;
+            position: static !important;
+        }
+        .ibm-logo-card {
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.05);
+            flex-shrink: 0;
+        }
+        .ibm-logo-img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text h1 {
+            color: #0f172a !important;
+        }
+        .logo-text .subtext {
+            color: #475569 !important;
+        }
+        .bob-badge {
+            background-color: #2563eb !important;
+            color: #ffffff !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+        }
+        .bob-badge-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            border-radius: 4px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            padding: 1px;
+        }
+        .question-reason-hint {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo-area">
+            <div class="ibm-logo-card">
+                <img src="/static/onboarding/ibm-logo.png" alt="IBM Logo" class="ibm-logo-img" />
+            </div>
+            <div class="logo-text">
+                <h1>IBM Candidate Assessment</h1>
+                <span class="subtext">Personalised Interview Evaluation</span>
+            </div>
+        </div>
+        <div class="bob-badge">
+            <img src="/static/bob-logo.png" alt="BOB Logo" class="bob-badge-icon" />
+            <span>Powered by IBM BOB CLI</span>
+        </div>
+    </header>
+
+    <main class="app-main">
+
+        <!-- ══ STATE 1: CANDIDATE IDENTITY VERIFICATION ══ -->
+        <section id="verify-screen" class="state-panel active">
+            <div class="verify-card-v2">
+                <div class="verify-header-flex">
+                    <div class="verify-header-icon">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div class="verify-header-text">
+                        <h2>Candidate Identity Verification</h2>
+                        <p class="verify-subtitle">Please verify your registered details below to begin the assessment.</p>
+                    </div>
+                </div>
+
+                <div class="verify-form-v2">
+                    <div class="input-group-v2">
+                        <label class="input-label-v2" for="verify-name">
+                            <i class="fa-solid fa-user"></i> FULL NAME
+                        </label>
+                        <input class="form-input-v2" type="text" id="verify-name" placeholder="e.g. John Doe" autocomplete="name" {% if is_submitted %}disabled{% endif %} />
+                    </div>
+
+                    <div class="input-group-v2">
+                        <label class="input-label-v2" for="verify-email">
+                            <i class="fa-solid fa-envelope"></i> EMAIL ID
+                        </label>
+                        <input class="form-input-v2" type="email" id="verify-email" placeholder="e.g. johndoe@example.com" autocomplete="email" {% if is_submitted %}disabled{% endif %} />
+                    </div>
+
+                    <div class="input-group-v2">
+                        <label class="input-label-v2" for="verify-dob">
+                            <i class="fa-solid fa-calendar-days"></i> DATE OF BIRTH
+                        </label>
+                        <input class="form-input-v2" type="date" id="verify-dob" {% if is_submitted %}disabled{% endif %} />
+                    </div>
+
+                    <div class="input-group-v2">
+                        <label class="input-label-v2" for="verify-experience">
+                            <i class="fa-solid fa-briefcase"></i> YEARS OF EXPERIENCE
+                        </label>
+                        <input class="form-input-v2" type="number" id="verify-experience" min="0" placeholder="e.g. 5" {% if is_submitted %}disabled{% endif %} />
+                    </div>
+
+                    <div id="verify-error" class="form-error-box" {% if is_submitted %}style="display:flex;"{% else %}style="display:none;"{% endif %}>
+                        <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                        <span id="verify-error-text">
+                            {% if is_submitted %}
+                            A submission was already recorded for "{{ candidate_name }}" ({{ candidate_email }}) on {{ duplicate_date }}. Duplicate attempts are not permitted.
+                            {% endif %}
+                        </span>
+                    </div>
+
+                    <button id="btn-verify" class="btn-verify-v2" onclick="verifyIdentity()" {% if is_submitted %}disabled{% endif %}>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Verify &amp; Proceed to Assessment
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STATE 1.5: INSTRUCTIONS SCREEN ══ -->
+        <section id="instructions-screen" class="state-panel">
+            <div class="verify-card-v2" style="max-width: 780px;">
+                <div class="verify-header-flex">
+                    <div class="verify-header-icon" style="background-color: #f2f4f8; border-color: #8d8d8d; color: #161616;">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <div class="verify-header-text">
+                        <h2>Assessment Instructions</h2>
+                        <p class="verify-subtitle">Please read the instructions and compliance warnings carefully before starting.</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem; color: #475569; font-size: 0.95rem; line-height: 1.6;">
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Test Structure</h3>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li><strong>Section A (Job Description):</strong> Evaluates your technical alignment with the specified core skills and responsibilities of the role.</li>
+                        <li><strong>Section B (Resume Questions):</strong> Custom-generated questions analyzing specific projects, technologies, and statements from your submitted CV.</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #da1e28; margin-bottom: 0.75rem;">
+                        <i class="fa-solid fa-circle-exclamation" style="margin-right: 0.25rem;"></i> Anti-Cheat &amp; Compliance Policy
+                    </h3>
+                    <p style="margin-bottom: 1rem;">
+                        This platform monitors tab activity and window focus to ensure a fair assessment. 
+                        <strong>Leaving the assessment screen, switching tabs, or losing window focus is strictly prohibited:</strong>
+                    </p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li><strong style="color: #ea580c;">First Offence:</strong> A warning overlay will appear with a 10-second countdown. You must immediately click "I understand" to resume the test.</li>
+                        <li><strong style="color: #da1e28;">Second Offence:</strong> The assessment will be terminated immediately, and all answers collected up to that point will be submitted automatically. The status will be reported as <strong>Terminated – Tab Switch</strong> in your results file.</li>
+                    </ul>
+                </div>
+
+                <button class="btn-verify-v2" onclick="startAssessment()">
+                    <i class="fa-solid fa-play"></i> I Agree, Start Assessment
+                </button>
+            </div>
+        </section>
+
+        <!-- ══ STATE 2: QUIZ PLAYER ══ -->
+        <section id="quiz-screen" class="state-panel">
+
+            <!-- Section banner — shown above the progress bar -->
+            <div id="section-banner" class="section-banner section-a-banner">
+                <div class="section-banner-inner">
+                    <span class="section-label-pill" id="section-pill">Section A</span>
+                    <span class="section-banner-title" id="section-banner-title">Job Description Questions</span>
+                    <span class="section-banner-sub" id="section-banner-sub">Questions based strictly on the Job Description</span>
+                </div>
+            </div>
+
+            <!-- Progress Header -->
+            <div class="quiz-progress-container">
+                <div class="progress-details">
+                    <span id="quiz-progress-text">Question 1 of 10</span>
+                    <span id="quiz-difficulty-label" style="display:none;">Difficulty: Medium</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="quiz-progress-fill" class="progress-bar-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+
+            <div class="quiz-layout">
+                <div class="quiz-question-card" id="question-card">
+                    <div class="question-header">
+                        <span class="question-number-badge">Q<span id="display-q-number">1</span></span>
+                        <span id="display-q-source" class="source-document-tag" style="display:none;">Source: Job Description</span>
+                    </div>
+                    <h2 id="display-q-text" class="question-title">Loading question...</h2>
+                    <div id="question-reason" class="question-reason-hint" style="display:none;"></div>
+                    <div id="options-container" class="options-grid"></div>
+                </div>
+
+                <div class="quiz-navigation">
+                    <button id="btn-prev-question" class="btn btn-secondary" onclick="prevQuestion()" disabled>
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button id="btn-next-question" class="btn btn-primary" onclick="nextQuestion()" disabled>
+                        Next <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STATE 3: SECTION TRANSITION (A → B) ══ -->
+        <section id="section-break-screen" class="state-panel">
+            <div class="section-break-container">
+                <div class="section-break-badge completed">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Section A Complete!</h2>
+                <p class="section-break-desc">You have finished all <strong>Job Description</strong> questions.</p>
+
+                <div class="section-break-cards">
+                    <div class="section-break-card done">
+                        <div class="sbc-icon"><i class="fa-solid fa-file-lines"></i></div>
+                        <div class="sbc-label">Section A</div>
+                        <div class="sbc-title">Job Description</div>
+                        <div class="sbc-status"><i class="fa-solid fa-check"></i> Completed</div>
+                    </div>
+                    <div class="section-break-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="section-break-card next">
+                        <div class="sbc-icon"><i class="fa-solid fa-file-user"></i></div>
+                        <div class="sbc-label">Section B</div>
+                        <div class="sbc-title">Your Resume</div>
+                        <div class="sbc-count" id="sbc-count-b">— questions</div>
+                    </div>
+                </div>
+
+                <p class="section-break-note">Section B will test your knowledge and experience based on <strong>your resume</strong>. Take a moment, then continue when ready.</p>
+
+                <button class="btn btn-primary" style="margin-top:1.5rem;" onclick="startSectionB()">
+                    <i class="fa-solid fa-play btn-icon"></i> Start Section B
+                </button>
+            </div>
+        </section>
+
+        <!-- ══ STATE 4: SUBMITTING ══ -->
+        <section id="submitting-screen" class="state-panel">
+            <div class="loading-container">
+                <div class="glass-loader">
+                    <div class="loader-waves"></div>
+                    <i class="fa-solid fa-paper-plane loader-icon pulse"></i>
+                </div>
+                <h2>Submitting Your Assessment</h2>
+                <p>Please wait while we securely record your responses...</p>
+            </div>
+        </section>
+
+        <!-- ══ STATE 5: THANK YOU ══ -->
+        <section id="thankyou-screen" class="state-panel">
+            <div class="thankyou-container">
+                <div class="thankyou-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Thank You!</h2>
+                <p class="thankyou-name" id="thankyou-name">Well done!</p>
+                <p class="thankyou-message">Your assessment has been submitted successfully. Our team will review your performance and get back to you with the next steps.</p>
+                <div class="thankyou-divider"></div>
+                <p class="thankyou-footer-note">You may now close this window.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>IBM Interview Assessment Portal &copy; 2026. Built with Python, FastAPI, and IBM BOB CLI.</p>
+    </footer>
+</div>
+
+<!-- Anti-Cheat Warning Overlay (shown over quiz screen) -->
+<div id="anticheat-overlay" class="anticheat-overlay">
+    <div class="anticheat-box">
+        <i class="fa-solid fa-triangle-exclamation anticheat-icon"></i>
+        <h3>Warning — Tab Switch Detected</h3>
+        <p>You left the quiz window. <strong>This is your only warning.</strong> Leaving again will immediately terminate your assessment.</p>
+        <p class="anticheat-timer">Auto-terminating in <span id="anticheat-countdown">10</span>s</p>
+        <button class="btn btn-primary" onclick="dismissWarning()">I understand, continue quiz</button>
+    </div>
+</div>
+
+<script>
+    // Read token from URL path: /assessment/{token}
+    const ASSESSMENT_TOKEN = window.location.pathname.split('/assessment/')[1] || '';
+</script>
+<script src="/static/interview/assessment.js"></script>
+</body>
+</html>
