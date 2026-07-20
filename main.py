@@ -488,7 +488,6 @@ async def download_results(interviewer_email: str):
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    host = os.environ.get("HOST", "0.0.0.0")
     port = int(os.environ.get("PORT", 8000))
-    print(f"Starting server on http://{host}:{port}")
-    uvicorn.run("main:app", host=host, port=port, reload=True)
+    print(f"Starting server on http://localhost:{port}")
+    uvicorn.run("main:app", host="127.0.0.1", port=port, reload=True)
